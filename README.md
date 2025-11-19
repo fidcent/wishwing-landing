@@ -1,73 +1,151 @@
-# Welcome to your Lovable project
+# WishWing Landing Page
 
-## Project info
+A modern, responsive landing page for WishWing - the smart birthday reminder and gifting app.
 
-**URL**: https://lovable.dev/projects/6c914499-5a64-4818-9c85-3177f362d801
+## Features
 
-## How can I edit this code?
+- ✨ Modern, clean design with gradient backgrounds
+- 🎨 Fully responsive (mobile, tablet, desktop)
+- ⚡ Built with Next.js 14 and TypeScript
+- 🎭 Smooth animations using Framer Motion
+- 🎯 SEO optimized
+- 📱 Mobile-first approach
+- 🎪 Interactive components
+- 🌈 Beautiful color scheme matching brand guidelines
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion (ready to use)
+- **Font**: Inter (sans-serif) & Pacifico (display)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6c914499-5a64-4818-9c85-3177f362d801) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18+ installed
+- npm or yarn package manager
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Install dependencies:
+```bash
+npm install
+```
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+2. Run the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+npm start
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+wishwing-landing/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx       # Root layout with metadata
+│   │   ├── page.tsx         # Main landing page
+│   │   └── globals.css      # Global styles
+│   └── components/
+│       ├── Navigation.tsx    # Header navigation
+│       ├── Hero.tsx          # Hero section with CTA
+│       ├── Features.tsx      # Features grid
+│       ├── HowItWorks.tsx    # 3-step process
+│       ├── WishCoinSection.tsx  # WishCoin explainer
+│       ├── GiftingShowcase.tsx  # Gift categories
+│       ├── Testimonials.tsx  # Customer testimonials
+│       ├── CTASection.tsx    # Final conversion CTA
+│       └── Footer.tsx        # Footer with links
+├── public/                   # Static assets (add images here)
+├── tailwind.config.ts        # Tailwind configuration
+├── tsconfig.json            # TypeScript configuration
+└── package.json             # Dependencies
 
-This project is built with:
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Design System
 
-## How can I deploy this project?
+### Colors
+- **Primary Purple**: #6C63FF
+- **Secondary Purple**: #9B4DFF
+- **Accent Pink**: #C147E9
+- **WishCoin Gold**: #FFD700
 
-Simply open [Lovable](https://lovable.dev/projects/6c914499-5a64-4818-9c85-3177f362d801) and click on Share -> Publish.
+### Typography
+- **Display Font**: Pacifico (for logo and headings)
+- **Body Font**: Inter (for all other text)
 
-## Can I connect a custom domain to my Lovable project?
+### Components
 
-Yes, you can!
+All components are modular and follow React best practices:
+- Type-safe with TypeScript
+- Responsive by default
+- Accessible with proper ARIA labels
+- Optimized performance
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Customization
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Adding Images
+
+Place images in the `public/` folder and reference them in components:
+```tsx
+import Image from 'next/image';
+
+<Image src="/logo.png" alt="WishWing Logo" width={40} height={40} />
+```
+
+### Modifying Colors
+
+Update colors in `tailwind.config.ts` under the `colors` section.
+
+### Adding New Sections
+
+Create new component in `src/components/` and import it in `src/app/page.tsx`.
+
+## SEO
+
+The site includes:
+- Meta tags for social sharing
+- OpenGraph tags
+- Structured semantic HTML
+- Optimized title and description
+- Mobile-friendly viewport settings
+
+## Performance
+
+- Optimized images with Next.js Image component
+- Lazy loading for below-fold content
+- Minimal JavaScript bundle
+- Fast initial page load
+- Smooth animations
+
+## Browser Support
+
+- Chrome (last 2 versions)
+- Firefox (last 2 versions)
+- Safari (last 2 versions)
+- Edge (last 2 versions)
+
+## License
+
+Copyright © 2025 WishWing - A product of Fidcent
+
+## Contributing
+
+This is a proprietary project. For any questions or contributions, please contact the development team.
+
+## Support
+
+For support, email hello_wishwing@fidcent.com or visit our website at wishwing.fidcent.com.

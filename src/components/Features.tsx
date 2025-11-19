@@ -1,88 +1,87 @@
+'use client';
 
-import React from 'react';
-import { Calendar, Users, Gift, Bell, Wallet, MessageCircle } from 'lucide-react';
+import Icon from './Icon';
 
-const Features = () => {
-  const features = [
-    {
-      icon: Calendar,
-      title: "Smart Birthday Tracking",
-      description: "Never forget another birthday with intelligent reminders across all your devices and platforms.",
-      color: "text-blue-600"
-    },
-    {
-      icon: Users,
-      title: "Collaborative Gifting",
-      description: "Friends and family can contribute to wish list items, making meaningful gifts more affordable.",
-      color: "text-green-600"
-    },
-    {
-      icon: Gift,
-      title: "Personal Wish Lists",
-      description: "Create and share wish lists with photos and descriptions. Let others know exactly what you want.",
-      color: "text-purple-600"
-    },
-    {
-      icon: Bell,
-      title: "Multi-Channel Reminders",
-      description: "Get notified via app, SMS, email, and WhatsApp. Choose how you want to be reminded.",
-      color: "text-orange-600"
-    },
-    {
-      icon: Wallet,
-      title: "WishCoins Wallet",
-      description: "Built-in digital wallet for easy transactions, micro-payments, and seamless gift contributions.",
-      color: "text-teal-600"
-    },
-    {
-      icon: MessageCircle,
-      title: "Digital Greetings",
-      description: "Send personalized messages and pre-recorded video greetings to make celebrations special.",
-      color: "text-pink-600"
-    }
-  ];
+const features = [
+  {
+    icon: 'calendar',
+    title: 'Smart Birthday Calendar',
+    description: 'Never forget a birthday with our intelligent calendar that tracks all your important dates and sends timely reminders.',
+  },
+  {
+    icon: 'gift',
+    title: 'Wishlist Management',
+    description: 'Create and manage your wishlist, share it with friends, and see what others want for their special day.',
+  },
+  {
+    icon: 'wallet',
+    title: 'WishCoin Virtual Currency',
+    description: 'Use WishCoins to contribute to friends\' wishlists or send gifts seamlessly. Top up easily and track your spending.',
+  },
+  {
+    icon: 'chatbubble',
+    title: 'Automated Greetings',
+    description: 'Schedule personalized birthday messages via SMS, WhatsApp, or email to be sent at the perfect time.',
+  },
+  {
+    icon: 'heart',
+    title: 'Group Gifting',
+    description: 'Pool resources with other friends to give bigger, better gifts that your loved ones really want.',
+  },
+  {
+    icon: 'people',
+    title: 'Contact Integration',
+    description: 'Sync with your phone contacts to automatically import birthdays and keep everything organized in one place.',
+  },
+];
 
+export default function Features() {
   return (
-    <section className="py-20 bg-white" id="features">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Everything You Need to
-            <span className="bg-wishwing-gradient bg-clip-text text-transparent block">
-              Celebrate Better
-            </span>
+    <section id="features" className="py-24 md:py-40 px-6 md:px-12 bg-gradient-to-br from-gray-lightest via-white to-gray-lightest">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-block px-4 py-2 bg-primary-purple/10 rounded-full mb-6">
+            <span className="text-primary-purple font-semibold text-sm uppercase tracking-wider">Features</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-text-primary mb-6 leading-tight">
+            Everything You Need to Celebrate Better
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            WishWing combines smart technology with heartfelt connections to make every celebration memorable.
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+            Powerful features designed to make every birthday unforgettable
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
-              className="group p-8 rounded-3xl bg-gradient-to-br from-white to-gray-50/50 border border-gray-100 hover:shadow-2xl hover:shadow-gray-500/10 transition-all duration-500 hover:-translate-y-2"
+              className="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group border border-gray-light/50 hover:border-primary-purple/30 relative overflow-hidden"
             >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color === 'text-blue-600' ? 'from-blue-500 to-blue-600' : 
-                feature.color === 'text-green-600' ? 'from-green-500 to-green-600' :
-                feature.color === 'text-purple-600' ? 'from-purple-500 to-purple-600' :
-                feature.color === 'text-orange-600' ? 'from-orange-500 to-orange-600' :
-                feature.color === 'text-teal-600' ? 'from-teal-500 to-teal-600' :
-                'from-pink-500 to-pink-600'} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <feature.icon className="w-8 h-8 text-white" />
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative">
+                {/* Icon */}
+                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  <Icon name={feature.icon} size={32} className="text-white" />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-primary-purple transition-colors duration-300">
+                  {feature.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-text-secondary leading-relaxed text-base">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default Features;
+}

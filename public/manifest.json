@@ -1,0 +1,32 @@
+{
+  "name": "WishWing",
+  "short_name": "WishWing",
+  "description": "Never miss a birthday again with WishWing - the smart app for birthday reminders, wishlists, and gifting.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#6C63FF",
+  "theme_color": "#6C63FF",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "social", "utilities"],
+  "screenshots": [
+    {
+      "src": "/wishwing-logo.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ]
+}
