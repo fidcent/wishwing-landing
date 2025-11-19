@@ -117,17 +117,17 @@ export default function AboutPage() {
       <section className="py-20 px-5 bg-gradient-primary text-white text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Join Thousands of Happy Users
+            Be Among the First to Try WishWing
           </h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Download WishWing today and never miss another birthday.
+            Join us on January 7, 2026 and never miss another birthday.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="/#download"
+              href="/#home"
               className="px-8 py-4 bg-white text-primary-purple rounded-xl font-semibold shadow-xl hover:-translate-y-0.5 transition-all"
             >
-              Download Now
+              Learn More
             </a>
           </div>
         </div>

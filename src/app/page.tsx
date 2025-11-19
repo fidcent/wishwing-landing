@@ -9,7 +9,6 @@ import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import WishCoinSection from '@/components/WishCoinSection';
 import GiftingShowcase from '@/components/GiftingShowcase';
-import Testimonials from '@/components/Testimonials';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
@@ -109,7 +108,6 @@ export default function Home() {
         <HowItWorks />
         <WishCoinSection />
         <GiftingShowcase />
-        <Testimonials />
         <CTASection />
         <Footer />
       </main>

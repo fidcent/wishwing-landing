@@ -119,8 +119,8 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-text-primary mb-1">Email Support</h3>
                   <p className="text-text-secondary mb-2">We typically respond within 24 hours</p>
-                  <a href="mailto:support@wishwing.com" className="text-primary-purple font-semibold hover:underline">
-                    support@wishwing.com
+                  <a href="mailto:hello_wishwing@fidcent.com" className="text-primary-purple font-semibold hover:underline">
+                    hello_wishwing@fidcent.com
                   </a>
                 </div>
               </div>

@@ -158,8 +158,8 @@ export default function PrivacyPage() {
               </ul>
               <p className="text-text-secondary leading-relaxed mt-4">
                 To exercise these rights, please contact us at{' '}
-                <a href="mailto:privacy@wishwing.com" className="text-primary-purple hover:underline">
-                  privacy@wishwing.com
+                <a href="mailto:privacies@fidcent.com" className="text-primary-purple hover:underline">
+                  privacies@fidcent.com
                 </a>
               </p>
             </div>

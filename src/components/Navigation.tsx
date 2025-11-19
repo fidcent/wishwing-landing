@@ -24,10 +24,18 @@ export default function Navigation() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsMobileMenuOpen(false);
+    
+    // Check if we're on the homepage
+    if (window.location.pathname === '/') {
+      // On homepage - scroll to element
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setIsMobileMenuOpen(false);
+      }
+    } else {
+      // On another page - navigate to homepage with hash
+      window.location.href = `/${href}`;
     }
   };
 
@@ -40,9 +48,9 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center justify-between">
         {/* Logo Section */}
-        <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer">
-          <img src="/logo.png" alt="WishWing Logo" className="w-10 h-10" />
-          <span className="font-display text-2xl text-primary-purple">WishWing</span>
+        <a href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity cursor-pointer">
+          <img src="/logo.png" alt="WishWing Logo" className="w-8 h-8 md:w-10 md:h-10" />
+          <span className="font-display text-lg md:text-2xl text-primary-purple">WishWing</span>
         </a>
 
         {/* Desktop Navigation */}
