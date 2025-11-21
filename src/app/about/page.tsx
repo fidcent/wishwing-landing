@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Us - Learn About WishWing',
-  description: 'Discover the story behind WishWing, a product of Fidcent. Learn how we help people never miss a birthday and celebrate every special moment.',
+  description: 'Discover the story behind WishWing, a product of Fidcent Technologies Limited. Learn how we help people never miss a birthday and celebrate every special moment.',
   openGraph: {
     title: 'About WishWing - Birthday Reminder App',
     description: 'Learn about WishWing and our mission to help you celebrate every birthday.',
@@ -87,7 +87,7 @@ export default function AboutPage() {
       <section className="py-20 px-5 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
-            Built by Fidcent
+            Built by Fidcent Technologies Limited
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed mb-8">
             WishWing is proudly developed by{' '}
@@ -97,7 +97,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="text-primary-purple hover:underline font-semibold"
             >
-              Fidcent
+              Fidcent Technologies Limited
             </a>
             , a technology company committed to creating innovative solutions that 
             enhance everyday life and strengthen human connections.

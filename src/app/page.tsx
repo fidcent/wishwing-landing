@@ -33,7 +33,7 @@ export default function Home() {
     description: 'Never miss a birthday again with WishWing',
     founder: {
       '@type': 'Organization',
-      name: 'Fidcent',
+      name: 'Fidcent Technologies Limited',
       url: 'https://tech.fidcent.com',
     },
     contactPoint: {

@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     'birthday management',
     'Fidcent'
   ],
-  authors: [{ name: 'Fidcent', url: 'https://tech.fidcent.com' }],
-  creator: 'Fidcent',
-  publisher: 'Fidcent',
+  authors: [{ name: 'Fidcent Technologies Limited', url: 'https://tech.fidcent.com' }],
+  creator: 'Fidcent Technologies Limited',
+  publisher: 'Fidcent Technologies Limited',
   robots: {
     index: true,
     follow: true,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://wishwing.com',
+    url: 'https://wishwing.fidcent.com',
     siteName: 'WishWing',
     title: 'WishWing - Never Miss a Birthday Again',
     description: "Celebrate every moment with WishWing - the smart app that helps you remember birthdays, manage wishlists, and send the perfect gift every time.",

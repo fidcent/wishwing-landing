@@ -222,7 +222,7 @@ export default function PrivacyPage() {
                     rel="noopener noreferrer"
                     className="text-primary-purple hover:underline"
                   >
-                    Fidcent
+                    Fidcent Technologies Limited
                   </a>
                 </p>
               </div>

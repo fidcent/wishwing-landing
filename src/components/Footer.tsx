@@ -111,7 +111,7 @@ export default function Footer() {
           </p>
           <p className="text-primary-purple font-medium text-sm mb-4">
             <a href="https://tech.fidcent.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              A product of Fidcent
+              A product of Fidcent Technologies Limited
             </a>
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-xs text-white/50">

@@ -200,7 +200,7 @@ export default function CareersPage() {
             rel="noopener noreferrer"
             className="text-4xl font-bold hover:underline"
           >
-            Fidcent
+            Fidcent Technologies Limited
           </a>
         </div>
       </section>

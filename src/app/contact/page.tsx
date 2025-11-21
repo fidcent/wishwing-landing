@@ -243,7 +243,7 @@ export default function ContactPage() {
           rel="noopener noreferrer"
           className="text-3xl font-bold hover:underline"
         >
-          Fidcent
+          Fidcent Technologies Limited
         </a>
       </section>
 

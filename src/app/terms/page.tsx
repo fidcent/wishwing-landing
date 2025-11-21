@@ -105,7 +105,7 @@ export default function TermsPage() {
               <h3 className="text-xl font-semibold text-text-primary mt-6 mb-3">Refunds</h3>
               <p className="text-text-secondary leading-relaxed">
                 All sales are final. Refunds will only be provided in accordance with applicable law or at our 
-                sole discretion. For refund requests, please contact support@wishwing.com.
+                sole discretion. For refund requests, please contact hello_wishwing@fidcent.com.
               </p>
             </div>
 
@@ -252,7 +252,7 @@ export default function TermsPage() {
                     rel="noopener noreferrer"
                     className="text-primary-purple hover:underline"
                   >
-                    Fidcent
+                    Fidcent Technologies Limited
                   </a>
                 </p>
               </div>
