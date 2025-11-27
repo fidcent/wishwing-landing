@@ -11,6 +11,7 @@ const footerLinks = {
   ],
   company: [
     { label: 'About Us', href: '/about', scroll: false },
+    { label: 'FAQ', href: '/faq', scroll: false },
     { label: 'Blog', href: '/blog', scroll: false },
     { label: 'Careers', href: '/careers', scroll: false },
     { label: 'Contact', href: '/contact', scroll: false },
@@ -121,6 +122,10 @@ export default function Footer() {
             <span>|</span>
             <Link href="/terms" className="hover:text-white transition-colors">
               Terms of Service
+            </Link>
+            <span>|</span>
+            <Link href="/refund" className="hover:text-white transition-colors">
+              Refund Policy
             </Link>
           </div>
         </div>

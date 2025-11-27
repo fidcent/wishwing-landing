@@ -10,12 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          purple: '#6C63FF',
-          DEFAULT: '#6C63FF',
+          purple: '#8B7FFF',
+          pink: '#D77FF5',
+          DEFAULT: '#8B7FFF',
         },
         secondary: {
-          purple: '#9B4DFF',
-          DEFAULT: '#9B4DFF',
+          purple: '#A28FFF',
+          DEFAULT: '#A28FFF',
         },
         accent: {
           pink: '#C147E9',
@@ -26,13 +27,13 @@ const config: Config = {
           shadow: '#FFA500',
         },
         gray: {
-          lightest: '#F8F9FA',
-          light: '#E5E7EB',
+          lightest: '#FAFBFC',
+          light: '#F3F4F6',
           medium: '#9CA3AF',
-          dark: '#4B5563',
+          dark: '#374151',
         },
         text: {
-          primary: '#1F2937',
+          primary: '#111827',
           secondary: '#6B7280',
         },
       },

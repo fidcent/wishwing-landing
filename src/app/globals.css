@@ -5,20 +5,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Colors */
-  --primary-purple: #6C63FF;
-  --secondary-purple: #9B4DFF;
+  /* Colors - Softer, more modern palette */
+  --primary-purple: #8B7FFF;
+  --secondary-purple: #A28FFF;
+  --primary-pink: #D77FF5;
   --accent-pink: #C147E9;
   --wishcoin-gold: #FFD700;
   --wishcoin-shadow: #FFA500;
   
   /* Grayscale */
   --white: #FFFFFF;
-  --gray-lightest: #F8F9FA;
-  --gray-light: #E5E7EB;
+  --gray-lightest: #FAFBFC;
+  --gray-light: #F3F4F6;
   --gray-medium: #9CA3AF;
-  --gray-dark: #4B5563;
-  --text-primary: #1F2937;
+  --gray-dark: #374151;
+  --text-primary: #111827;
   --text-secondary: #6B7280;
   
   /* Semantic */

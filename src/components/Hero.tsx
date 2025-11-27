@@ -14,37 +14,25 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-primary overflow-hidden flex items-center justify-center pt-24 md:pt-32 pb-20 md:pb-28 px-6 md:px-12">
-      {/* Floating Particles Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-white animate-float"
-            style={{
-              width: `${Math.random() * 20 + 6}px`,
-              height: `${Math.random() * 20 + 6}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: Math.random() * 0.3 + 0.1,
-              animationDelay: `${Math.random() * 20}s`,
-              animationDuration: `${Math.random() * 10 + 15}s`,
-            }}
-          />
-        ))}
+    <section id="home" className="relative min-h-screen bg-gradient-to-br from-primary-purple via-primary-pink to-primary-purple overflow-hidden flex items-center justify-center pt-24 md:pt-32 pb-20 md:pb-28 px-6 md:px-12">
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '48px 48px'
+        }} />
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto">
         {/* Headline */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-8 leading-tight animate-fadeInUp text-balance tracking-tight">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fadeInUp text-balance">
           Never Miss a Birthday Again
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-2xl text-white/95 max-w-3xl mx-auto mb-12 leading-relaxed animate-fadeInUp animate-delay-200">
-          Celebrate every moment with WishWing - the smart app that helps you remember birthdays, 
-          manage wishlists, and send the perfect gift every time.
+        <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-12 leading-relaxed animate-fadeInUp animate-delay-200">
+          The smart app that helps you remember birthdays, create wishlists, and send the perfect gift every time.
         </p>
 
         {/* Launch Countdown */}
@@ -54,9 +42,9 @@ export default function Hero() {
 
         {/* CTA Buttons - Only show after launch */}
         {isLaunched && (
-          <div className="flex flex-wrap justify-center gap-5 mb-8 animate-fadeInUp animate-delay-400">
+          <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fadeInUp animate-delay-400">
           <button 
-            className="h-16 px-10 bg-white text-primary-purple rounded-2xl font-bold text-lg shadow-2xl hover:-translate-y-1 hover:shadow-3xl transition-all duration-300 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-white/50"
+            className="h-14 px-8 bg-white text-primary-purple rounded-full font-semibold text-base shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-white/70"
             onClick={() => analytics.trackDownloadClick('ios', 'Hero')}
             aria-label="Download WishWing on the App Store"
           >
@@ -66,7 +54,7 @@ export default function Hero() {
             Download on App Store
           </button>
           <button 
-            className="h-16 px-10 bg-white text-primary-purple rounded-2xl font-bold text-lg shadow-2xl hover:-translate-y-1 hover:shadow-3xl transition-all duration-300 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-white/50"
+            className="h-14 px-8 bg-white text-primary-purple rounded-full font-semibold text-base shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-white/70"
             onClick={() => analytics.trackDownloadClick('android', 'Hero')}
             aria-label="Download WishWing on Google Play"
           >

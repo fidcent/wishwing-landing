@@ -41,8 +41,8 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-light/50' : 'bg-white/80 backdrop-blur-md'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-sm' : 'bg-transparent'
       }`}
       style={{ height: '72px' }}
     >
@@ -54,7 +54,7 @@ export default function Navigation() {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-12">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -63,7 +63,7 @@ export default function Navigation() {
                 handleNavClick(e, link.href);
                 analytics.trackNavigationClick(link.label);
               }}
-              className="text-gray-dark font-medium hover:text-primary-purple transition-all duration-300 cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-purple after:transition-all after:duration-300 hover:after:w-full pb-1"
+              className="text-gray-dark font-medium hover:text-primary-purple transition-colors duration-200 cursor-pointer"
             >
               {link.label}
             </a>
@@ -78,12 +78,9 @@ export default function Navigation() {
               handleNavClick(e, '#download');
               analytics.trackCTAClick('Download App', 'Navigation');
             }}
-            className="px-7 py-3 bg-gradient-primary text-white rounded-full font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer inline-flex items-center gap-2"
+            className="px-6 py-2.5 bg-primary-purple text-white rounded-full font-medium hover:bg-secondary-purple transition-colors duration-200 cursor-pointer"
           >
-            Download App
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+            Join Waitlist
           </a>
         </div>
 

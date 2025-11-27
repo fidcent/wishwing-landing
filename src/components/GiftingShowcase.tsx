@@ -43,46 +43,46 @@ const giftCategories = [
 
 export default function GiftingShowcase() {
   return (
-    <section id="gifting" className="py-20 md:py-32 px-5 bg-gray-lightest">
-      <div className="max-w-7xl mx-auto">
+    <section id="gifting" className="py-20 md:py-28 px-6 md:px-12 bg-white">
+      <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-text-primary mb-4">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">
             Send the Perfect Gift
           </h2>
           <p className="text-base md:text-lg text-text-secondary">
-            Choose from a wide variety of gift options
+            Choose from a variety of gift options
           </p>
         </div>
 
         {/* Gift Categories Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
           {giftCategories.map((category, index) => (
             <div
               key={index}
-              className="relative bg-white p-6 md:p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer text-center"
+              className="relative bg-gray-lightest p-6 rounded-xl hover:shadow-md transition-shadow duration-200 text-center"
             >
               {/* Coming Soon Badge */}
               {category.comingSoon && (
-                <div className="absolute top-3 right-3 bg-warning text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">
-                  Coming Soon
+                <div className="absolute top-2 right-2 bg-primary-purple/10 text-primary-purple text-xs font-medium px-2 py-1 rounded-full">
+                  Soon
                 </div>
               )}
 
               {/* Icon */}
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-purple/10 to-secondary-purple/10 flex items-center justify-center">
-                  <Icon name={category.icon} size={32} className="text-primary-purple" />
+              <div className="flex items-center justify-center mb-3">
+                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center shadow-sm">
+                  <Icon name={category.icon} size={24} className="text-primary-purple" />
                 </div>
               </div>
 
               {/* Title */}
-              <h3 className="text-lg md:text-xl font-bold text-text-primary mb-2">
+              <h3 className="text-base font-semibold text-text-primary mb-1">
                 {category.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm md:text-base text-text-secondary">
+              <p className="text-sm text-text-secondary">
                 {category.description}
               </p>
             </div>
