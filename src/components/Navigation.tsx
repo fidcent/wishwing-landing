@@ -48,9 +48,15 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center justify-between">
         {/* Logo Section */}
-        <a href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity cursor-pointer">
+        <a href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-90 transition-opacity cursor-pointer group">
           <img src="/logo.png" alt="WishWing Logo" className="w-8 h-8 md:w-10 md:h-10" />
-          <span className="font-display text-lg md:text-2xl text-primary-purple">WishWing</span>
+          <span className={`text-xl md:text-2xl font-bold tracking-tight transition-all duration-300 ${
+            isScrolled 
+              ? 'bg-gradient-to-r from-primary-purple to-primary-pink bg-clip-text text-transparent' 
+              : 'text-white drop-shadow-lg'
+          }`}>
+            WishWing
+          </span>
         </a>
 
         {/* Desktop Navigation */}

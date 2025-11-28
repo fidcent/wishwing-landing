@@ -53,12 +53,28 @@ export default function CTASection() {
         </div>
         )}
 
-        {/* Pre-launch message */}
+        {/* Pre-launch CTA */}
         {!isLaunched && (
-          <div className="inline-block bg-white/15 backdrop-blur-sm px-6 py-3 rounded-full">
-            <p className="text-white font-medium text-base">
-              📱 Coming January 7, 2026
-            </p>
+          <div className="space-y-6">
+            <a
+              href="#early-access"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.querySelector('#early-access');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                analytics.trackCTAClick('Join Waitlist', 'CTA Section');
+              }}
+              className="inline-block px-8 py-4 bg-white text-primary-purple rounded-full font-semibold text-base shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/70"
+            >
+              Join the Waitlist
+            </a>
+            <div className="inline-block bg-white/15 backdrop-blur-sm px-6 py-3 rounded-full ml-4">
+              <p className="text-white font-medium text-base">
+                📱 Coming January 7, 2026
+              </p>
+            </div>
           </div>
         )}
       </div>
