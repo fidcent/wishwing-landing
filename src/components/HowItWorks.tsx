@@ -5,20 +5,20 @@ import Icon from './Icon';
 const steps = [
   {
     number: 1,
-    title: 'Add Your Contacts',
-    description: 'Import birthdays automatically from your phone contacts',
+    title: 'Connect Your Circle',
+    description: 'Import contacts and sync birthdays, anniversaries, and special occasions automatically',
     icon: 'person-add',
   },
   {
     number: 2,
-    title: 'Get Reminders',
-    description: 'Never miss a special day with smart notifications',
+    title: 'Create & Share Wishlists',
+    description: 'Build wishlists for your occasions and let friends contribute with WishCoins',
     icon: 'notifications',
   },
   {
     number: 3,
-    title: 'Send Gifts & Greetings',
-    description: 'Make their day memorable with perfect gifts',
+    title: 'Celebrate Together',
+    description: 'Send meaningful gifts, coordinate group contributions, and make every moment special',
     icon: 'gift',
   },
 ];
@@ -33,10 +33,10 @@ export default function HowItWorks() {
             <span className="text-primary-purple font-medium text-sm">How It Works</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-3 leading-tight">
-            Simple & Seamless
+            Gifting Made Social
           </h2>
           <p className="text-base md:text-lg text-text-secondary">
-            Get started in three easy steps
+            From remembering occasions to sending the perfect gift—all in one place
           </p>
         </div>
 

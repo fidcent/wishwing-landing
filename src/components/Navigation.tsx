@@ -79,10 +79,10 @@ export default function Navigation() {
         {/* Download CTA Button */}
         <div className="hidden md:block">
           <a
-            href="#download"
+            href="#early-access"
             onClick={(e) => {
-              handleNavClick(e, '#download');
-              analytics.trackCTAClick('Download App', 'Navigation');
+              handleNavClick(e, '#early-access');
+              analytics.trackCTAClick('Join Waitlist', 'Navigation');
             }}
             className="px-6 py-2.5 bg-primary-purple text-white rounded-full font-medium hover:bg-secondary-purple transition-colors duration-200 cursor-pointer"
           >
@@ -134,14 +134,14 @@ export default function Navigation() {
               </a>
             ))}
             <a
-              href="#download"
+              href="#early-access"
               onClick={(e) => {
-                handleNavClick(e, '#download');
-                analytics.trackCTAClick('Download App', 'Mobile Menu');
+                handleNavClick(e, '#early-access');
+                analytics.trackCTAClick('Join Waitlist', 'Mobile Menu');
               }}
               className="mt-4 px-8 py-3 bg-white text-primary-purple rounded-full font-semibold w-64 text-center cursor-pointer"
             >
-              Download App
+              Join Waitlist
             </a>
           </div>
         </div>

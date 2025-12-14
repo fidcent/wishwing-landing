@@ -17,14 +17,14 @@ export default function CTASection() {
       <div className="max-w-4xl mx-auto text-center">
         {/* Title */}
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
-          Ready to Get Started?
+          Own the Occasion Layer
         </h2>
 
         {/* Subtitle */}
         <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-8">
           {isLaunched 
-            ? 'Download WishWing today and get 1,000 FREE WishCoins!'
-            : 'Join the waitlist and be first to know when we launch on January 7, 2026'}
+            ? 'Join thousands of Nigerians making celebrations memorable. Get 1,000 FREE WishCoins!'
+            : 'Be part of Nigeria\'s gifting revolution. Join the waitlist for early access on January 7, 2026'}
         </p>
 
         {/* Download Buttons - Only show after launch */}

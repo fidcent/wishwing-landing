@@ -6,10 +6,12 @@ import { analytics, useScrollDepth } from '@/utils/analytics';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import WaitlistForm from '@/components/WaitlistForm';
+import ProblemSection from '@/components/ProblemSection';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import WishCoinSection from '@/components/WishCoinSection';
 import GiftingShowcase from '@/components/GiftingShowcase';
+import VisionSection from '@/components/VisionSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
@@ -31,7 +33,7 @@ export default function Home() {
     name: 'WishWing',
     url: 'https://wishwing.fidcent.com',
     logo: 'https://wishwing.fidcent.com/wishwing-logo.png',
-    description: 'Smart birthday and gifting app for Nigeria. Never miss a birthday again.',
+    description: 'Nigeria\'s digital gifting infrastructure. Transform cash-based gift-giving into social, meaningful celebrations.',
     founder: {
       '@type': 'Organization',
       name: 'Fidcent Technologies Limited',
@@ -67,7 +69,7 @@ export default function Home() {
       name: 'Fidcent Technologies Limited',
     },
     datePublished: '2026-01-07',
-    description: 'Never miss a birthday again. Smart calendar, wishlists, and seamless gifting with WishCoins. Send airtime, data, and gifts across Nigeria.',
+    description: 'Nigeria\'s digital gifting platform. Create wishlists, coordinate group gifts, and celebrate every occasion with WishCoins. Transform how you give and receive gifts.',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
@@ -86,7 +88,7 @@ export default function Home() {
         name: 'What is WishWing?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'WishWing is a mobile app that helps you remember birthdays, manage wishlists, and send gifts using our virtual currency called WishCoins.',
+          text: 'WishWing is Nigeria\'s social gifting platform that transforms cash-based gift-giving into structured, meaningful celebrations. It uses WishCoins—a virtual currency designed specifically for gifting—to make every occasion memorable.',
         },
       },
       {
@@ -110,7 +112,7 @@ export default function Home() {
         name: 'What are WishCoins?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'WishCoins are our virtual currency. 1 WishCoin = ₦2.5. Use them to send gifts, airtime, greetings, and more.',
+          text: 'WishCoins are our virtual currency that standardizes gifting—more meaningful than impersonal cash transfers. 1 WishCoin = ₦2.5. Use them to send gifts, contribute to wishlists, coordinate group gifts, and more.',
         },
       },
       {
@@ -154,10 +156,12 @@ export default function Home() {
         <Navigation />
         <Hero />
         <WaitlistForm />
+        <ProblemSection />
         <Features />
         <HowItWorks />
         <WishCoinSection />
         <GiftingShowcase />
+        <VisionSection />
         <CTASection />
         <Footer />
       </main>

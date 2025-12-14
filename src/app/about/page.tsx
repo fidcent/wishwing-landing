@@ -4,11 +4,11 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About WishWing - Fidcent Technologies | Nigerian Birthday & Gifting App',
-  description: 'WishWing is a product of Fidcent Technologies Limited, a Nigerian fintech company building innovative digital solutions. Learn about our mission to make celebrations easier through technology.',
+  title: 'About WishWing - Nigeria\'s Digital Gifting Platform | Fidcent Technologies',
+  description: 'WishWing transforms cash-based gift-giving into meaningful celebrations. Built by Fidcent Technologies, we\'re creating Nigeria\'s default digital gifting infrastructure.',
   openGraph: {
-    title: 'About WishWing - Birthday Reminder App by Fidcent Technologies',
-    description: 'Learn about WishWing and our mission to help Nigerians celebrate every birthday with seamless digital experiences.',
+    title: 'About WishWing - Nigeria\'s Social Gifting Platform',
+    description: 'Learn about WishWing\'s mission to own the occasion layer in Nigeria—becoming the default tool for birthdays, weddings, holidays, and every celebration.',
     url: 'https://wishwing.fidcent.com/about',
   },
   alternates: {
@@ -42,12 +42,12 @@ export default function AboutPage() {
           <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
             <span className="text-white font-semibold text-sm uppercase tracking-wider">About WishWing</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">Making Celebrations Easier Through Technology</h1>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">Nigeria's Digital Gifting Infrastructure</h1>
           <p className="text-xl md:text-2xl opacity-90 mb-4">
-            A product of Fidcent Technologies Limited
+            Transforming cash-based gift-giving into meaningful celebrations
           </p>
           <p className="text-lg opacity-80">
-            Building innovative digital solutions for African markets
+            A product of Fidcent Technologies Limited
           </p>
         </div>
       </section>
@@ -105,22 +105,23 @@ export default function AboutPage() {
           </h2>
           <div className="space-y-6 text-lg text-text-secondary leading-relaxed">
             <p className="text-xl font-semibold text-primary-purple">
-              To make celebrations easier and more meaningful through technology, connecting Nigerians 
-              with their loved ones through seamless digital experiences.
+              To become Nigeria's default digital gifting infrastructure—transforming informal, 
+              cash-based gift-giving into structured, social, and emotionally meaningful experiences.
             </p>
             <p>
-              At WishWing, we believe that birthdays are special moments that deserve to be celebrated. 
-              Our mission is to ensure that no birthday goes unnoticed, no matter how busy life gets.
+              Gift-giving in Nigeria is frequent and culturally important, but current options are fragmented. 
+              Cash transfers feel impersonal, physical gifting is logistically complex, group gifting is hard 
+              to coordinate, and people often miss important occasions.
             </p>
             <p>
-              We understand Nigerian culture – the importance of family, the joy of gifting, 
-              and the value of staying connected. That's why we built WishWing specifically for Nigerians, 
-              with features that reflect our unique needs and traditions.
+              WishWing is a social gifting platform powered by WishCoins—our virtual currency. 
+              We sit between payments, social interaction, and commerce, focusing on occasions 
+              and relationships rather than transactions.
             </p>
             <p>
-              WishWing is more than just a reminder app – it's your personal celebration assistant, 
-              helping you stay connected with the people who matter most. From sending airtime and data 
-              to organizing group gifts, we're making it easier than ever to show you care.
+              Our strategic goal is to own the "occasion layer" in Nigeria—becoming the default tool 
+              people use whenever there is something to celebrate, from birthdays to weddings, 
+              holidays, and corporate events.
             </p>
           </div>
         </div>
@@ -178,24 +179,24 @@ export default function AboutPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-md">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-text-primary mb-3">Reliability</h3>
-              <p className="text-text-secondary">
-                We ensure you never miss an important date with timely reminders and smart notifications.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-md">
               <div className="text-4xl mb-4">💜</div>
-              <h3 className="text-xl font-bold text-text-primary mb-3">Connection</h3>
+              <h3 className="text-xl font-bold text-text-primary mb-3">Emotion Over Transaction</h3>
               <p className="text-text-secondary">
-                We help you strengthen relationships by making it easy to show you care on special days.
+                We believe gifting should feel personal and meaningful, not like another bank transfer.
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-md">
-              <div className="text-4xl mb-4">✨</div>
-              <h3 className="text-xl font-bold text-text-primary mb-3">Innovation</h3>
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="text-xl font-bold text-text-primary mb-3">Social by Design</h3>
               <p className="text-text-secondary">
-                We continuously improve our platform with features like WishCoins and group gifting.
+                Celebrations are better together. Our features encourage sharing, contributing, and connecting.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-md">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-text-primary mb-3">Occasion-First</h3>
+              <p className="text-text-secondary">
+                Every feature is built around celebrations—birthdays, weddings, holidays, and corporate events.
               </p>
             </div>
           </div>
@@ -269,24 +270,29 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold text-text-primary mb-8">Follow Us on Social Media</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`relative flex items-center gap-3 px-6 py-3 bg-white border-2 border-gray-200 rounded-full hover:border-primary-purple hover:shadow-lg transition-all duration-300 ${
-                    social.badge ? 'opacity-60 cursor-not-allowed' : 'hover:scale-105'
-                  }`}
-                  {...(social.badge && { onClick: (e) => e.preventDefault() })}
-                >
-                  <span className="text-2xl">{social.icon}</span>
-                  <span className="font-semibold text-text-primary">{social.name}</span>
-                  {social.badge && (
+                social.badge ? (
+                  <div
+                    key={index}
+                    className="relative flex items-center gap-3 px-6 py-3 bg-white border-2 border-gray-200 rounded-full opacity-60 cursor-not-allowed"
+                  >
+                    <span className="text-2xl">{social.icon}</span>
+                    <span className="font-semibold text-text-primary">{social.name}</span>
                     <span className="absolute -top-2 -right-2 px-2 py-1 bg-yellow-400 text-gray-900 text-xs font-bold rounded-full">
                       {social.badge}
                     </span>
-                  )}
-                </a>
+                  </div>
+                ) : (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-6 py-3 bg-white border-2 border-gray-200 rounded-full hover:border-primary-purple hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    <span className="text-2xl">{social.icon}</span>
+                    <span className="font-semibold text-text-primary">{social.name}</span>
+                  </a>
+                )
               ))}
             </div>
           </div>

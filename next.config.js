@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: [],
   },
+  staticPageGenerationTimeout: 120,
 };
 
 module.exports = nextConfig;

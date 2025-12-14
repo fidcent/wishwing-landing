@@ -27,12 +27,12 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-5xl mx-auto">
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fadeInUp text-balance">
-          Never Miss a Birthday Again
+          Nigeria's Digital Gifting Platform
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-12 leading-relaxed animate-fadeInUp animate-delay-200">
-          The smart app that helps you remember birthdays, create wishlists, and send the perfect gift every time.
+          Transform how you celebrate. WishWing makes gift-giving personal, social, and memorable—from birthdays to weddings and every occasion in between.
         </p>
 
         {/* Launch Countdown */}

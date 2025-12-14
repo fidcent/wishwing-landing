@@ -1,10 +1,11 @@
 'use client';
 
 const benefits = [
-  'Send gifts instantly',
-  'Contribute to wishlists',
-  'Easy top-up options',
-  'Secure transactions',
+  'More meaningful than cash transfers',
+  'Pool contributions for group gifts',
+  'Redeem for airtime, data, and real gifts',
+  'Easy top-up via cards, bank, or mobile money',
+  'Secure with transparent transactions',
 ];
 
 export default function WishCoinSection() {
@@ -30,16 +31,16 @@ export default function WishCoinSection() {
           {/* Content */}
           <div className="text-left order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Are WishCoins?
+              WishCoins: The Currency of Celebration
             </h2>
 
             <p className="text-base md:text-lg text-white/90 leading-relaxed mb-6">
-              Your virtual currency for gifting. WishCoins make it easy to send gifts, 
-              contribute to wishlists, and celebrate special moments.
+              Unlike impersonal cash transfers, WishCoins are designed specifically for gifting. 
+              They're flexible, emotionally meaningful, and perfect for any celebration—from birthdays to weddings.
             </p>
 
             <p className="text-base text-white/90 mb-6">
-              <span className="font-semibold text-white">₦2.5 per WishCoin</span> • Send airtime, data, or transfer to friends
+              <span className="font-semibold text-white">₦2.5 per WishCoin</span> • Redeem for airtime, data, gift cards, or real gifts
             </p>
 
             {/* Benefits List */}

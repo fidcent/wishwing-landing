@@ -47,11 +47,14 @@ export default function GiftingShowcase() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-14">
+          <div className="inline-block px-4 py-1.5 bg-primary-purple/10 rounded-full mb-4">
+            <span className="text-primary-purple font-medium text-sm">Gift Options</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">
-            Send the Perfect Gift
+            Beyond Cash Transfers
           </h2>
-          <p className="text-base md:text-lg text-text-secondary">
-            Choose from a variety of gift options
+          <p className="text-base md:text-lg text-text-secondary max-w-2xl mx-auto">
+            WishWing sits between payments, social interaction, and commerce—making every gift personal and memorable
           </p>
         </div>
 

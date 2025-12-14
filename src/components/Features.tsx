@@ -4,53 +4,20 @@ import Icon from './Icon';
 
 const features = [
   {
-    icon: 'people',
-    title: 'Smart Contact Management',
-    description: '📱 Auto-import birthdays from phone contacts • 🏷️ Categorize by Family, Friends, Work • 🔍 Smart search and filtering • ✏️ Edit relationships easily • 📊 Track your gifting history',
+    icon: 'calendar',
+    title: 'Occasion-Centered Design',
+    description: '🎂 Birthdays • 💒 Weddings • 🎄 Holidays • 🏢 Corporate Events • 📅 Smart reminders that never let you miss a celebration',
     details: [
-      'Automatically sync birthdays from your phone contacts',
-      'Organize contacts by relationship type',
-      'Quick search with intelligent filtering',
-      'Statistics dashboard showing contacts and upcoming events'
-    ]
-  },
-  {
-    icon: 'chatbubble',
-    title: 'Intelligent Greeting Automation',
-    description: '⏰ Schedule greetings at perfect times (Midnight, Morning, Afternoon, Evening) • 💬 Send via SMS, WhatsApp, Email • 📝 50+ pre-written templates • 🎨 Customize your messages',
-    details: [
-      'Schedule times: Midnight (500₦), Morning (300₦), Afternoon (250₦), Evening (200₦)',
-      'Multiple delivery channels: SMS, WhatsApp, Email, Push Notification',
-      'Template library with birthday, anniversary, and holiday greetings',
-      'Save favorite templates for quick access'
-    ]
-  },
-  {
-    icon: 'gift',
-    title: 'Send Real Gifts, Not Just Wishes',
-    description: '🪙 Transfer WishCoins • 📱 Send airtime & data (MTN, Glo, Airtel, 9Mobile) • 🎁 Gift cards (Amazon, iTunes, Netflix) • 💐 Physical gifts coming soon',
-    details: [
-      'WishCoins: Direct transfer to recipient wallet',
-      'Airtime: 45 WishCoins = ₦100 airtime',
-      'Data: 125 WishCoins = 1GB data',
-      'Coming soon: flowers, cakes, spa services, experiences'
+      'Automatically sync dates from phone contacts',
+      'Support for all celebration types',
+      'Smart reminders and notifications',
+      'Track your celebration history'
     ]
   },
   {
     icon: 'heart',
-    title: 'Group Gifting Made Easy',
-    description: '👥 Pool contributions with multiple friends • 💰 Set funding goals • 📊 Track who contributed • 🎯 Auto-notify recipient when goal is met',
-    details: [
-      'Create group gift campaigns with funding goals',
-      'Track contributions from all participants',
-      'Automatic notifications when fully funded',
-      'Perfect for big-ticket gifts'
-    ]
-  },
-  {
-    icon: 'calendar',
-    title: 'Your Birthday Wishlist Hub',
-    description: '📸 Create wishes with photos • 💰 Set funding goals in WishCoins • 🔒 Control privacy (Public/Private/Friends-Only) • 🎁 Track progress with visual indicators',
+    title: 'Social Wishlists',
+    description: '📸 Create wishes with photos • 💰 Set funding goals • 🔗 Share with friends • 🎁 Watch contributions come in and track progress',
     details: [
       'Create unlimited wishes with photos and descriptions',
       'Friends can browse and contribute any amount',
@@ -59,13 +26,46 @@ const features = [
     ]
   },
   {
+    icon: 'people',
+    title: 'Group Gifting Made Simple',
+    description: '👥 Pool contributions from multiple friends • 💰 Set funding goals • 📊 Track who contributed • 🎯 Perfect for big-ticket gifts',
+    details: [
+      'Create group gift campaigns with funding goals',
+      'Track contributions from all participants',
+      'Automatic notifications when fully funded',
+      'Coordinate effortlessly with others'
+    ]
+  },
+  {
+    icon: 'gift',
+    title: 'Real Gifts, Not Just Money',
+    description: '🪙 WishCoins feel more thoughtful than cash • 📱 Airtime & data • 🎁 Gift cards • 💐 Physical gifts from partner vendors',
+    details: [
+      'WishCoins: Emotionally distinct from cash transfers',
+      'Airtime: 45 WishCoins = ₦100 airtime',
+      'Data: 125 WishCoins = 1GB data',
+      'Partner vendors handle fulfillment'
+    ]
+  },
+  {
+    icon: 'chatbubble',
+    title: 'Automated Greetings',
+    description: '⏰ Schedule greetings at perfect times • 💬 SMS, WhatsApp, Email delivery • 📝 50+ customizable templates • 🎨 Make it personal',
+    details: [
+      'Schedule: Midnight, Morning, Afternoon, Evening',
+      'Multiple delivery channels',
+      'Template library for every occasion',
+      'Save favorites for quick access'
+    ]
+  },
+  {
     icon: 'wallet',
-    title: 'Complete Financial Transparency',
-    description: '💰 Real-time balance display • 📊 Detailed transaction history • 💳 Multiple top-up methods • 📤 Cash-out option (5% fee) • 📈 Monthly spending analytics',
+    title: 'Transparent & Secure',
+    description: '💰 Real-time balance • 📊 Full transaction history • 💳 Multiple payment methods • 📤 Cash-out option available',
     details: [
       'Track all purchases, transfers, and top-ups',
       'Top-up via cards, bank transfer, USSD, mobile money',
-      'Cash-out: 5% fee, 1,000 WishCoin minimum, 30-day holding',
+      'Secure transactions with full transparency',
       'Monthly analytics to monitor spending'
     ]
   },
@@ -81,10 +81,10 @@ export default function Features() {
             <span className="text-primary-purple font-medium text-sm">Features</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4 leading-tight">
-            Everything You Need
+            Own Every Occasion
           </h2>
           <p className="text-base md:text-lg text-text-secondary max-w-2xl mx-auto">
-            Powerful features to make every birthday unforgettable
+            Powerful features designed around celebrations—birthdays, weddings, holidays, and corporate events
           </p>
         </div>
 
