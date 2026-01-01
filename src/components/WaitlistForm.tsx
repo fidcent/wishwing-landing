@@ -14,7 +14,7 @@ export default function WaitlistForm() {
   useEffect(() => {
     const fetchWaitlistCount = async () => {
       try {
-        const response = await fetch('https://api-dev.fidcent.com/identity/auth/waitlist/count/wishwing');
+        const response = await fetch('https://api-dev.fidcent.com/identity/api/v1/auth/waitlist/count/wishwing');
         if (response.ok) {
           const data = await response.json();
           setWaitlistCount(data.count || 0);
@@ -42,7 +42,7 @@ export default function WaitlistForm() {
       });
 
       // Call the waitlist API
-      const response = await fetch('https://api-dev.fidcent.com/identity/auth/waitlist', {
+      const response = await fetch('https://api-dev.fidcent.com/identity/api/v1/auth/waitlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
