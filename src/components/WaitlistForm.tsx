@@ -9,7 +9,7 @@ export default function WaitlistForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [waitlistCount, setWaitlistCount] = useState<number | null>(null);
-  const apiBaseUrl = 'https://api-dev.fidcent.com/identity/api/v1';
+  const apiBaseUrl = 'https://api.fidcent.com/identity/api/v1';
 
   // Fetch waitlist count on mount
   useEffect(() => {
