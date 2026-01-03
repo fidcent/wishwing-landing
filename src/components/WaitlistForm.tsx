@@ -134,7 +134,7 @@ export default function WaitlistForm() {
               <p className="text-white/90 text-sm mt-2">{error}</p>
             )}
             <p className="text-white/70 text-sm">
-              Join <span className="font-medium text-white">{waitlistCount !== null ? waitlistCount.toLocaleString() : '10,000'}+</span> early adopters. No spam, launch updates only.
+              Join <span className="font-medium text-white">{waitlistCount !== null ? waitlistCount.toLocaleString() : '0'}+</span> early adopters. No spam, launch updates only.
             </p>
           </form>
         ) : (
