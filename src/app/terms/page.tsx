@@ -247,7 +247,7 @@ export default function TermsPage() {
                 <p className="text-text-primary">
                   <strong>Company:</strong> WishWing - A product of{' '}
                   <a 
-                    href="https://tech.fidcent.com" 
+                    href="https://fidcent.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-primary-purple hover:underline"

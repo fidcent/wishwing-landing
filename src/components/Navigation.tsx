@@ -41,7 +41,7 @@ export default function Navigation() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/90 backdrop-blur-xl shadow-soft border-b border-neutral-200/50' 
-          : 'bg-white/5 backdrop-blur-sm'
+          : 'bg-white/90 backdrop-blur-xl shadow-soft border-b border-neutral-200/50'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -60,7 +60,8 @@ export default function Navigation() {
           />
           <span className={`text-3xl font-extrabold tracking-tight transition-all duration-300 ${
             isScrolled 
-              ? 'text-neutral-900' 
+              // ? 'text-neutral-900' 
+              ? 'bg-gradient-to-r from-primary-600 via-accent-600 to-primary-600 bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(124,58,237,0.8)]' 
               : 'bg-gradient-to-r from-primary-600 via-accent-600 to-primary-600 bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(124,58,237,0.8)]'
           }`}>
             WISHWING

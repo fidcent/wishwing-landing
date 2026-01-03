@@ -141,7 +141,7 @@ export default function Footer() {
             <p className="text-neutral-600 text-sm">
               A product of{' '}
               <a 
-                href="https://tech.fidcent.com" 
+                href="https://fidcent.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-primary-400 hover:text-primary-300 transition-colors font-medium"

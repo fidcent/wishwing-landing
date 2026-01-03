@@ -199,7 +199,7 @@ export default function CareersPage() {
             WishWing is a product of
           </p>
           <a
-            href="https://tech.fidcent.com"
+            href="https://fidcent.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-4xl font-bold hover:underline"

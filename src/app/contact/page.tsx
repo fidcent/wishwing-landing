@@ -242,7 +242,7 @@ export default function ContactPage() {
       <section className="py-16 px-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-center">
         <p className="text-lg mb-2 opacity-90">A product of</p>
         <a
-          href="https://tech.fidcent.com"
+          href="https://fidcent.com"
           target="_blank"
           rel="noopener noreferrer"
           className="text-3xl font-bold hover:underline"

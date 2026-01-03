@@ -34,16 +34,28 @@ export default function Home() {
     url: 'https://wishwing.fidcent.com',
     logo: 'https://wishwing.fidcent.com/wishwing-logo.png',
     description: 'Nigeria\'s digital gifting infrastructure. Transform cash-based gift-giving into social, meaningful celebrations.',
+    foundingDate: '2025',
+    foundingLocation: {
+      '@type': 'Place',
+      name: 'Lagos, Nigeria',
+    },
     founder: {
       '@type': 'Organization',
       name: 'Fidcent Technologies Limited',
-      url: 'https://tech.fidcent.com',
+      url: 'https://fidcent.com',
     },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Support',
       email: 'hello_wishwing@fidcent.com',
       url: 'https://wishwing.fidcent.com/contact',
+      areaServed: 'NG',
+      availableLanguage: ['en'],
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'NG',
+      addressLocality: 'Lagos',
     },
     sameAs: [
       'https://twitter.com/wishwing',
@@ -51,6 +63,41 @@ export default function Home() {
       'https://instagram.com/wishwing',
       'https://linkedin.com/company/wishwing',
     ],
+  };
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'WishWing',
+    url: 'https://wishwing.fidcent.com',
+    description: 'Nigeria\'s digital gifting platform',
+    inLanguage: 'en-NG',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://wishwing.fidcent.com/search?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'WishCoins',
+    description: 'Virtual currency for gifting on WishWing platform. Transform how you give and receive gifts.',
+    brand: {
+      '@type': 'Brand',
+      name: 'WishWing',
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'NGN',
+      lowPrice: '1250',
+      highPrice: '100000',
+      offerCount: '3',
+    },
   };
 
   const appSchema = {
@@ -138,16 +185,31 @@ export default function Home() {
       <Script
         id="organization-schema"
         type="application/ld+json"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <Script
+        id="product-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       <Script
         id="app-schema"
         type="application/ld+json"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }}
       />
       <Script
         id="faq-schema"
         type="application/ld+json"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
