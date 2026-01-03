@@ -66,8 +66,8 @@ export default function RefundPolicyPage() {
 
             <p className="mt-4">
               To request a refund for technical issues, contact{' '}
-              <a href="mailto:support@wishwing.com" className="text-primary-purple hover:underline">
-                support@wishwing.com
+              <a href="mailto:hello_wishwing@fidcent.com" className="text-primary-purple hover:underline">
+                hello_wishwing@fidcent.com
               </a>{' '}
               within 48 hours of the transaction.
             </p>
@@ -217,8 +217,8 @@ export default function RefundPolicyPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-6 bg-gradient-to-br from-primary-purple/5 to-primary-pink/5 rounded-2xl border border-primary-purple/20">
                 <p className="font-semibold text-text-primary mb-2">📧 Email Support</p>
-                <a href="mailto:support@wishwing.com" className="text-primary-purple hover:underline">
-                  support@wishwing.com
+                <a href="mailto:hello_wishwing@fidcent.com" className="text-primary-purple hover:underline">
+                  hello_wishwing@fidcent.com
                 </a>
                 <p className="text-sm mt-1">Response within 24 hours</p>
               </div>

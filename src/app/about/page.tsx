@@ -20,14 +20,14 @@ const socialLinks = [
   { name: 'Facebook', icon: '📘', url: 'https://facebook.com/wishwing' },
   { name: 'Twitter/X', icon: '🐦', url: 'https://twitter.com/wishwing' },
   { name: 'Instagram', icon: '📸', url: 'https://instagram.com/wishwing' },
-  { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/company/wishwing' },
+  { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/company/fidcent' },
   { name: 'TikTok', icon: '🎵', url: '#', badge: 'Coming Soon' },
 ];
 
 const contactInfo = [
-  { label: 'Support Email', value: 'support@wishwing.com', icon: '📧', link: 'mailto:support@wishwing.com' },
-  { label: 'Help & Inquiries', value: 'help@wishwing.com', icon: '❓', link: 'mailto:help@wishwing.com' },
-  { label: 'Business Inquiries', value: 'business@fidcent.com', icon: '💼', link: 'mailto:business@fidcent.com' },
+  { label: 'Support Email', value: 'hello_wishwing@fidcent.com', icon: '📧', link: 'mailto:hello_wishwing@fidcent.com' },
+  { label: 'Help & Inquiries', value: 'hello_wishwing@fidcent.com', icon: '❓', link: 'mailto:hello_wishwing@fidcent.com' },
+  { label: 'Business Inquiries', value: 'partners@fidcent.com', icon: '💼', link: 'mailto:partners@fidcent.com' },
   { label: 'Response Time', value: 'Within 24 hours', icon: '⏱️', link: null },
 ];
 
@@ -306,7 +306,7 @@ export default function AboutPage() {
             Be Among the First to Try WishWing
           </h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Join us on January 7, 2026 and never miss another birthday.
+            Join the waitlist and never miss another birthday.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

@@ -191,7 +191,7 @@ export default function PricingSection() {
             Get <span className="font-bold underline">1000 FREE WishCoins</span> when you download on launch day
           </p>
           <p className="text-lg text-white/90">
-            January 7, 2026 • Worth ₦2,500 • Limited to first 10,000 users
+            Worth ₦2,500 • Limited to first 10,000 users
           </p>
         </div>
 

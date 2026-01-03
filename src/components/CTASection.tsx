@@ -4,13 +4,7 @@ import { useState, useEffect } from 'react';
 import { analytics } from '@/utils/analytics';
 
 export default function CTASection() {
-  const [isLaunched, setIsLaunched] = useState(false);
-
-  useEffect(() => {
-    const launchDate = new Date('2026-01-07T00:00:00').getTime();
-    const now = new Date().getTime();
-    setIsLaunched(now >= launchDate);
-  }, []);
+  const isLaunched = false; // Set to true when app is available
 
   return (
     <section id="download" className="py-20 md:py-28 px-6 bg-gradient-to-br from-primary-purple to-primary-pink">
@@ -24,7 +18,7 @@ export default function CTASection() {
         <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-8">
           {isLaunched 
             ? 'Join thousands of Nigerians making celebrations memorable. Get 1,000 FREE WishCoins!'
-            : 'Be part of Nigeria\'s gifting revolution. Join the waitlist for early access on January 7, 2026'}
+            : 'Be part of Nigeria\'s gifting revolution. Join the waitlist for early access.'}
         </p>
 
         {/* Download Buttons - Only show after launch */}
@@ -72,7 +66,7 @@ export default function CTASection() {
             </a>
             <div className="inline-block bg-white/15 backdrop-blur-sm px-6 py-3 rounded-full ml-4">
               <p className="text-white font-medium text-base">
-                📱 Coming January 7, 2026
+                📱 Coming Soon to iOS & Android
               </p>
             </div>
           </div>

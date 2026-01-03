@@ -17,8 +17,8 @@ export default function WaitlistForm() {
       try {
         const response = await fetch(`${apiBaseUrl}/auth/waitlist/count/wishwing`);
         if (response.ok) {
-          const data = await response.json();
-          setWaitlistCount(data.count || 0);
+          const result = await response.json();
+          setWaitlistCount(result.data?.count || 0);
         }
       } catch (err) {
         // Silently fail, use fallback count
@@ -102,7 +102,7 @@ export default function WaitlistForm() {
             Get <span className="font-semibold text-yellow-300">1,000 FREE WishCoins</span> when we launch
           </p>
           <p className="text-lg md:text-2xl font-semibold text-white mb-2">
-            January 7, 2026
+            🚀 Launching Soon
           </p>
           <p className="text-sm md:text-base text-white/75">
             📱 iOS & Android
@@ -142,7 +142,7 @@ export default function WaitlistForm() {
             <div className="text-5xl mb-3">✅</div>
             <h3 className="text-2xl font-semibold text-white mb-2">You're on the list!</h3>
             <p className="text-white/85 text-base mb-1">
-              We'll notify you on January 7, 2026.
+              We'll notify you when we launch.
             </p>
             <p className="text-white font-medium text-base">
               1,000 WishCoins reserved! 🎉
