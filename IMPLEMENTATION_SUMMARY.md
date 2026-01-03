@@ -33,7 +33,7 @@
 - ✅ Free bonus highlight: "1000 FREE WishCoins"
 
 ### 5. Footer Updates
-- ✅ **Made** "A product of Fidcent" **clickable** → https://tech.fidcent.com
+- ✅ **Made** "A product of Fidcent" **clickable** → https://fidcent.com
 - ✅ Opens in new tab with `target="_blank" rel="noopener noreferrer"`
 - ✅ Hover effect with underline
 - ✅ Real logo integrated
@@ -242,7 +242,7 @@ Currently logs to console (dev mode). Ready to connect to:
 ✅ Brand logo  
 ✅ Navigation columns  
 ✅ Social media icons  
-✅ Clickable Fidcent link → tech.fidcent.com  
+✅ Clickable Fidcent link → fidcent.com  
 ✅ Legal links (privacy, terms)  
 
 ---
@@ -250,7 +250,7 @@ Currently logs to console (dev mode). Ready to connect to:
 ## 🔗 Important Links
 
 - **Dev Server:** http://localhost:3000
-- **Fidcent:** https://tech.fidcent.com
+- **Fidcent:** https://fidcent.com
 - **Repository:** fidcenttech/wishwing-landing
 - **Branch:** develop
 
@@ -377,4 +377,4 @@ All requirements from the specification have been fully implemented:
 ---
 
 **Built with ❤️ by the WishWing team**  
-**A product of [Fidcent](https://tech.fidcent.com)**
+**A product of [Fidcent](https://fidcent.com)**

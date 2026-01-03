@@ -24,13 +24,13 @@ export default function VisionSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1.5 bg-primary-purple/10 rounded-full mb-4">
-            <span className="text-primary-purple font-medium text-sm">Our Vision</span>
+          <div className="inline-block px-4 py-1.5 bg-primary-100 rounded-full mb-4">
+            <span className="text-primary-600 font-medium text-sm">Our Vision</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-neutral-900 mb-4 leading-tight">
             Building Africa's Celebration Ecosystem
           </h2>
-          <p className="text-base md:text-lg text-text-secondary max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-neutral-600 max-w-3xl mx-auto">
             WishWing isn't just an app—it's the future of how Africa celebrates. We're creating digital infrastructure that makes every occasion meaningful.
           </p>
         </div>
@@ -40,39 +40,19 @@ export default function VisionSection() {
           {visionPoints.map((point, index) => (
             <div
               key={index}
-              className="text-center p-8 bg-gradient-to-br from-primary-purple/5 to-primary-pink/5 rounded-2xl border border-primary-purple/20 hover:border-primary-purple/40 transition-colors duration-200"
+              className="text-center p-8 bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl border border-primary-200 hover:border-primary-600 transition-all duration-300 hover:shadow-strong"
             >
               <div className="text-5xl mb-4">{point.emoji}</div>
-              <h3 className="text-xl font-bold text-text-primary mb-3">
+              <h3 className="text-xl font-bold text-neutral-900 mb-3">
                 {point.title}
               </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
+              <p className="text-neutral-600 text-sm leading-relaxed">
                 {point.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Strategic Statement */}
-        <div className="bg-gradient-to-br from-primary-purple to-primary-pink rounded-3xl p-8 md:p-12 text-center">
-          <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-4">
-            WishWing sits at the intersection of <span className="font-semibold text-white">payments</span>, <span className="font-semibold text-white">social interaction</span>, and <span className="font-semibold text-white">commerce</span>—focusing on relationships and occasions rather than transactions.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <div className="bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full">
-              <span className="text-white font-medium">🎂 Birthdays</span>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full">
-              <span className="text-white font-medium">💒 Weddings</span>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full">
-              <span className="text-white font-medium">🎄 Holidays</span>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full">
-              <span className="text-white font-medium">🏢 Corporate Events</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

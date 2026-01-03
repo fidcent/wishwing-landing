@@ -58,7 +58,7 @@ All major sections now have unique IDs for smooth scrolling:
 - ⏳ Terms of Service → `#terms` (placeholder for future page)
 
 **External Links:**
-- ✅ Fidcent → https://tech.fidcent.com (opens in new tab)
+- ✅ Fidcent → https://fidcent.com (opens in new tab)
 - ✅ Social media icons (Facebook, Twitter, Instagram, LinkedIn)
 
 ---

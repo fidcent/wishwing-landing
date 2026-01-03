@@ -90,16 +90,16 @@ export default function PricingSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 bg-primary-purple/10 rounded-full mb-6">
-            <span className="text-primary-purple font-semibold text-sm uppercase tracking-wider">Pricing</span>
+          <div className="inline-block px-4 py-2 bg-primary-100 rounded-full mb-6">
+            <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">Pricing</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-text-primary mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-neutral-900 mb-6 leading-tight">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-4">
-            Buy WishCoins to send gifts, airtime, and greetings. <span className="font-semibold text-primary-purple">1 WishCoin = ₦2.5</span>
+          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed mb-4">
+            Buy WishCoins to send gifts, airtime, and greetings. <span className="font-semibold text-primary-600">1 WishCoin = ₦2.5</span>
           </p>
-          <p className="text-base text-text-secondary max-w-2xl mx-auto">
+          <p className="text-base text-neutral-600 max-w-2xl mx-auto">
             🇳🇬 All prices in Nigerian Naira (NGN) • No hidden fees • Bigger bundles = More bonus coins
           </p>
         </div>
@@ -109,18 +109,18 @@ export default function PricingSection() {
           {pricingBundles.map((bundle) => (
             <div
               key={bundle.name}
-              className={`relative p-8 rounded-3xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+              className={`relative p-8 rounded-3xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-strong ${
                 bundle.popular
-                  ? 'border-primary-purple bg-gradient-to-br from-primary-purple/5 to-primary-pink/5'
+                  ? 'border-primary-600 bg-gradient-to-br from-primary-50 to-accent-50'
                   : bundle.bestValue
                   ? 'border-yellow-400 bg-gradient-to-br from-yellow-50 to-orange-50'
-                  : 'border-gray-200 bg-white'
+                  : 'border-neutral-200 bg-white'
               }`}
             >
               {/* Badge */}
               {bundle.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="px-4 py-1 bg-primary-purple text-white text-sm font-bold rounded-full">
+                  <span className="px-4 py-1 bg-primary-600 text-white text-sm font-bold rounded-full shadow-medium">
                     Most Popular
                   </span>
                 </div>
@@ -134,14 +134,14 @@ export default function PricingSection() {
               )}
 
               {/* Bundle Name */}
-              <h3 className="text-2xl font-bold text-text-primary mb-2">{bundle.name}</h3>
+              <h3 className="text-2xl font-bold text-neutral-900 mb-2">{bundle.name}</h3>
               
               {/* Price */}
               <div className="mb-4">
-                <div className="text-4xl font-extrabold text-primary-purple mb-1">
+                <div className="text-4xl font-extrabold text-primary-600 mb-1">
                   ₦{bundle.price.toLocaleString()}
                 </div>
-                <div className="text-sm text-text-secondary">
+                <div className="text-sm text-neutral-600">
                   {bundle.coins.toLocaleString()} WishCoins
                 </div>
               </div>
@@ -160,7 +160,7 @@ export default function PricingSection() {
 
               {/* Savings */}
               {bundle.savings && (
-                <div className="text-primary-purple font-bold text-sm mb-4">
+                <div className="text-primary-600 font-bold text-sm mb-4">
                   💰 You Save {bundle.savings}%
                 </div>
               )}
@@ -169,10 +169,10 @@ export default function PricingSection() {
               <button
                 className={`w-full py-3 px-6 rounded-full font-bold transition-all duration-300 ${
                   bundle.popular
-                    ? 'bg-primary-purple text-white hover:bg-primary-purple/90'
+                    ? 'bg-primary-600 text-white hover:bg-primary-700 shadow-medium hover:shadow-strong'
                     : bundle.bestValue
-                    ? 'bg-yellow-400 text-gray-900 hover:bg-yellow-300'
-                    : 'bg-gray-100 text-text-primary hover:bg-gray-200'
+                    ? 'bg-yellow-400 text-neutral-900 hover:bg-yellow-300'
+                    : 'bg-neutral-100 text-neutral-900 hover:bg-neutral-200'
                 }`}
               >
                 Coming Jan 7, 2026
@@ -197,18 +197,18 @@ export default function PricingSection() {
 
         {/* What Can You Do With WishCoins */}
         <div className="mb-20">
-          <h3 className="text-3xl md:text-4xl font-bold text-text-primary mb-12 text-center">
+          <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-12 text-center">
             What Can You Do With WishCoins?
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
               <div
                 key={index}
-                className="p-6 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 hover:border-primary-purple hover:shadow-lg transition-all duration-300"
+                className="p-6 bg-gradient-to-br from-neutral-50 to-white rounded-2xl border border-neutral-200/50 hover:border-primary-600 hover:shadow-strong transition-all duration-300"
               >
                 <div className="text-4xl mb-3">{useCase.icon}</div>
-                <h4 className="font-bold text-lg text-text-primary mb-2">{useCase.title}</h4>
-                <p className="text-text-secondary text-sm">{useCase.description}</p>
+                <h4 className="font-bold text-lg text-neutral-900 mb-2">{useCase.title}</h4>
+                <p className="text-neutral-600 text-sm">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -216,21 +216,21 @@ export default function PricingSection() {
 
         {/* Payment Methods */}
         <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-8">
             Payment Methods Accepted
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
             {paymentMethods.map((method) => (
               <div
                 key={method.name}
-                className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-full hover:border-primary-purple hover:shadow-md transition-all duration-300"
+                className="flex items-center gap-2 px-6 py-3 bg-white border border-neutral-200 rounded-full hover:border-primary-600 hover:shadow-medium transition-all duration-300"
               >
                 <span className="text-2xl">{method.logo}</span>
-                <span className="font-semibold text-text-primary">{method.name}</span>
+                <span className="font-semibold text-neutral-900">{method.name}</span>
               </div>
             ))}
           </div>
-          <p className="text-text-secondary text-sm mt-6">
+          <p className="text-neutral-600 text-sm mt-6">
             🔒 All payments secured with industry-standard encryption • PCI DSS Compliant
           </p>
         </div>

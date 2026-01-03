@@ -22,15 +22,19 @@ export default function FAQPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-12 px-5 bg-gradient-primary text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+      <section className="pt-32 pb-12 px-5 bg-gradient-to-br from-neutral-900 via-primary-900 to-neutral-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        </div>
+        <div className="relative max-w-4xl mx-auto text-center">
+          <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-6">
             <span className="text-white font-semibold text-sm uppercase tracking-wider">Help Center</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Frequently Asked Questions
           </h1>
-          <p className="text-lg md:text-xl opacity-90">
+          <p className="text-lg md:text-xl text-white/90">
             Everything you need to know about WishWing
           </p>
         </div>

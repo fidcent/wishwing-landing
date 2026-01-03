@@ -20,14 +20,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 md:py-40 px-6 md:px-12 bg-gradient-to-br from-gray-lightest via-white to-gray-lightest">
+    <section id="testimonials" className="py-24 md:py-40 px-6 md:px-12 bg-gradient-to-br from-neutral-50 via-white to-neutral-50">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 bg-primary-purple/10 rounded-full mb-6">
-            <span className="text-primary-purple font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+          <div className="inline-block px-4 py-2 bg-primary-100 rounded-full mb-6">
+            <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-text-primary leading-tight">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-neutral-900 leading-tight">
             Loved by Thousands
           </h2>
         </div>
@@ -37,10 +37,10 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-gray-light/50 relative group"
+              className="bg-white p-10 rounded-3xl shadow-soft hover:shadow-strong hover:-translate-y-2 transition-all duration-500 border border-neutral-200/50 relative group"
             >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
               
               <div className="relative">
                 {/* Stars */}
@@ -53,20 +53,20 @@ export default function Testimonials() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-gray-dark text-lg leading-relaxed mb-8">
+                <p className="text-neutral-700 text-lg leading-relaxed mb-8">
                   "{testimonial.quote}"
                 </p>
 
                 {/* Author */}
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-600 to-accent-600 flex items-center justify-center text-white font-bold text-lg shadow-medium">
                     {testimonial.author.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-bold text-text-primary">
+                    <p className="font-bold text-neutral-900">
                       {testimonial.author}
                     </p>
-                    <p className="text-sm text-gray-medium">
+                    <p className="text-sm text-neutral-500">
                       {testimonial.role}
                     </p>
                   </div>
