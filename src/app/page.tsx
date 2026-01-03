@@ -16,16 +16,16 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
+  // Setup scroll depth tracking at component level
+  const cleanup = useScrollDepth();
+  
   useEffect(() => {
     // Initialize analytics
     analytics.init();
     analytics.trackPageView('/');
 
-    // Setup scroll depth tracking
-    const cleanup = useScrollDepth();
-    
     return cleanup;
-  }, []);
+  }, [cleanup]);
 
   const organizationSchema = {
     '@context': 'https://schema.org',

@@ -13,7 +13,7 @@ const giftCategories = [
     icon: 'gift',
     title: 'Physical Gifts',
     description: 'Flowers, chocolates & more',
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     icon: 'phone',
@@ -47,13 +47,13 @@ export default function GiftingShowcase() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-14">
-          <div className="inline-block px-4 py-1.5 bg-primary-purple/10 rounded-full mb-4">
-            <span className="text-primary-purple font-medium text-sm">Gift Options</span>
+          <div className="inline-block px-4 py-1.5 bg-accent-100 rounded-full mb-4">
+            <span className="text-accent-600 font-medium text-sm">Gift Options</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-3">
             Beyond Cash Transfers
           </h2>
-          <p className="text-base md:text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-neutral-600 max-w-2xl mx-auto">
             WishWing sits between payments, social interaction, and commerce—making every gift personal and memorable
           </p>
         </div>
@@ -63,29 +63,29 @@ export default function GiftingShowcase() {
           {giftCategories.map((category, index) => (
             <div
               key={index}
-              className="relative bg-gray-lightest p-6 rounded-xl hover:shadow-md transition-shadow duration-200 text-center"
+              className="relative bg-neutral-50 p-6 rounded-xl hover:shadow-strong transition-all duration-300 text-center border border-neutral-200/50"
             >
               {/* Coming Soon Badge */}
               {category.comingSoon && (
-                <div className="absolute top-2 right-2 bg-primary-purple/10 text-primary-purple text-xs font-medium px-2 py-1 rounded-full">
+                <div className="absolute top-2 right-2 bg-accent-100 text-accent-600 text-xs font-medium px-2 py-1 rounded-full">
                   Soon
                 </div>
               )}
 
               {/* Icon */}
               <div className="flex items-center justify-center mb-3">
-                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center shadow-sm">
-                  <Icon name={category.icon} size={24} className="text-primary-purple" />
+                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center shadow-soft">
+                  <Icon name={category.icon} size={24} className="text-primary-600" />
                 </div>
               </div>
 
               {/* Title */}
-              <h3 className="text-base font-semibold text-text-primary mb-1">
+              <h3 className="text-base font-semibold text-neutral-900 mb-1">
                 {category.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-text-secondary">
+              <p className="text-sm text-neutral-600">
                 {category.description}
               </p>
             </div>

@@ -45,46 +45,50 @@ export default function BlogPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-5 bg-gradient-primary text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">WishWing Blog</h1>
-          <p className="text-xl md:text-2xl opacity-90">
+      <section className="pt-32 pb-20 px-5 bg-gradient-to-br from-neutral-900 via-primary-900 to-neutral-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        </div>
+        <div className="relative max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">WishWing Blog</h1>
+          <p className="text-xl md:text-2xl text-white/90">
             Tips, stories, and updates about celebrating birthdays
           </p>
         </div>
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20 px-5 bg-gray-lightest">
+      <section className="py-20 px-5 bg-neutral-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
+            {blogPosts.map((post) => (
               <article 
-                key={index}
-                className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                key={post.title}
+                className="group bg-white rounded-3xl shadow-soft overflow-hidden hover:shadow-strong transition-all duration-300 cursor-pointer border border-neutral-200/50"
               >
                 {/* Placeholder Image */}
-                <div className="h-48 bg-gradient-to-br from-primary-purple to-accent-pink"></div>
+                <div className="h-48 bg-gradient-to-br from-primary-600 to-accent-600"></div>
                 
                 {/* Content */}
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3 text-sm">
-                    <span className="text-primary-purple font-semibold">{post.category}</span>
-                    <span className="text-text-secondary">•</span>
-                    <span className="text-text-secondary">{post.readTime}</span>
+                    <span className="text-primary-600 font-semibold">{post.category}</span>
+                    <span className="text-neutral-400">•</span>
+                    <span className="text-neutral-600">{post.readTime}</span>
                   </div>
                   
-                  <h2 className="text-xl font-bold text-text-primary mb-3 hover:text-primary-purple transition-colors">
+                  <h2 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors">
                     {post.title}
                   </h2>
                   
-                  <p className="text-text-secondary mb-4 line-clamp-3">
+                  <p className="text-neutral-600 mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-text-secondary">{post.date}</span>
-                    <span className="text-primary-purple font-semibold hover:underline">
+                    <span className="text-sm text-neutral-500">{post.date}</span>
+                    <span className="text-primary-600 font-semibold group-hover:underline">
                       Read More →
                     </span>
                   </div>

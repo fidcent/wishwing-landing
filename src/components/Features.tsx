@@ -5,114 +5,91 @@ import Icon from './Icon';
 const features = [
   {
     icon: 'calendar',
-    title: 'Occasion-Centered Design',
-    description: '🎂 Birthdays • 💒 Weddings • 🎄 Holidays • 🏢 Corporate Events • 📅 Smart reminders that never let you miss a celebration',
-    details: [
-      'Automatically sync dates from phone contacts',
-      'Support for all celebration types',
-      'Smart reminders and notifications',
-      'Track your celebration history'
-    ]
+    title: 'Occasion-Centered',
+    description: 'Smart reminders for birthdays, weddings, holidays, and corporate events—never miss a celebration.',
   },
   {
     icon: 'heart',
     title: 'Social Wishlists',
-    description: '📸 Create wishes with photos • 💰 Set funding goals • 🔗 Share with friends • 🎁 Watch contributions come in and track progress',
-    details: [
-      'Create unlimited wishes with photos and descriptions',
-      'Friends can browse and contribute any amount',
-      'Privacy controls for each wishlist',
-      'Get notified when wishes are fulfilled'
-    ]
+    description: 'Create wishes with photos, set funding goals, and watch contributions come in from friends.',
   },
   {
     icon: 'people',
-    title: 'Group Gifting Made Simple',
-    description: '👥 Pool contributions from multiple friends • 💰 Set funding goals • 📊 Track who contributed • 🎯 Perfect for big-ticket gifts',
-    details: [
-      'Create group gift campaigns with funding goals',
-      'Track contributions from all participants',
-      'Automatic notifications when fully funded',
-      'Coordinate effortlessly with others'
-    ]
+    title: 'Group Gifting',
+    description: 'Pool contributions from multiple friends for big-ticket gifts. Track who contributed effortlessly.',
   },
   {
     icon: 'gift',
-    title: 'Real Gifts, Not Just Money',
-    description: '🪙 WishCoins feel more thoughtful than cash • 📱 Airtime & data • 🎁 Gift cards • 💐 Physical gifts from partner vendors',
-    details: [
-      'WishCoins: Emotionally distinct from cash transfers',
-      'Airtime: 45 WishCoins = ₦100 airtime',
-      'Data: 125 WishCoins = 1GB data',
-      'Partner vendors handle fulfillment'
-    ]
+    title: 'Real Gifts, Not Cash',
+    description: 'WishCoins feel thoughtful. Redeem for airtime, data, gift cards, and physical gifts.',
   },
   {
     icon: 'chatbubble',
     title: 'Automated Greetings',
-    description: '⏰ Schedule greetings at perfect times • 💬 SMS, WhatsApp, Email delivery • 📝 50+ customizable templates • 🎨 Make it personal',
-    details: [
-      'Schedule: Midnight, Morning, Afternoon, Evening',
-      'Multiple delivery channels',
-      'Template library for every occasion',
-      'Save favorites for quick access'
-    ]
+    description: 'Schedule greetings via SMS, WhatsApp, or Email. 50+ customizable templates for every occasion.',
   },
   {
     icon: 'wallet',
     title: 'Transparent & Secure',
-    description: '💰 Real-time balance • 📊 Full transaction history • 💳 Multiple payment methods • 📤 Cash-out option available',
-    details: [
-      'Track all purchases, transfers, and top-ups',
-      'Top-up via cards, bank transfer, USSD, mobile money',
-      'Secure transactions with full transparency',
-      'Monthly analytics to monitor spending'
-    ]
+    description: 'Real-time balance tracking, full transaction history, multiple payment methods, and cash-out options.',
   },
 ];
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 md:py-32 px-6 md:px-12 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section id="features" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-neutral-50">
+      <div className="max-w-7xl mx-auto">
+        
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1.5 bg-primary-purple/10 rounded-full mb-4">
-            <span className="text-primary-purple font-medium text-sm">Features</span>
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 mb-6 animate-fade-in">
+            <svg className="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <span className="text-primary-700 font-semibold text-sm">Features</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4 leading-tight">
-            Own Every Occasion
+          
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 tracking-tight animate-fade-in-up">
+            Own Every{' '}
+            <span className="block text-gradient">Occasion</span>
           </h2>
-          <p className="text-base md:text-lg text-text-secondary max-w-2xl mx-auto">
+          
+          <p className="text-lg md:text-xl text-neutral-600 leading-relaxed animate-fade-in-up animate-delay-100">
             Powerful features designed around celebrations—birthdays, weddings, holidays, and corporate events
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {features.map((feature) => (
             <div
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 group border border-gray-200 hover:border-primary-purple/30"
+              key={feature.icon + feature.title}
+              className="group relative bg-white rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-300 border border-neutral-200/50 hover:border-primary-200 animate-fade-in-up"
+              style={{ animationDelay: `${features.indexOf(feature) * 100}ms` }}
             >
+              {/* Gradient Overlay on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-accent-50/50 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
               
-              <div className="relative">
-              
-                {/* Icon */}
-                <div className="w-14 h-14 bg-gradient-to-br from-primary-purple to-primary-pink rounded-xl flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-200">
-                  <Icon name={feature.icon} size={28} className="text-white" />
+              {/* Icon Container */}
+              <div className="relative w-14 h-14 mb-6">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Icon name={feature.icon} size={28} className="text-white relative z-10" />
                 </div>
-
-                {/* Title */}
-                <h3 className="text-lg font-semibold text-text-primary mb-3">
-                  {feature.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-text-secondary text-sm leading-relaxed">
-                  {feature.description}
-                </p>
               </div>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors">
+                {feature.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-neutral-600 leading-relaxed text-base">
+                {feature.description}
+              </p>
+
+              {/* Decorative Element */}
+              <div className="absolute top-8 right-8 w-20 h-20 bg-gradient-to-br from-primary-200/20 to-accent-200/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
         </div>
