@@ -42,7 +42,7 @@ export default function Home() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Support',
-      email: 'support@wishwing.com',
+      email: 'hello_wishwing@fidcent.com',
       url: 'https://wishwing.fidcent.com/contact',
     },
     sameAs: [
@@ -68,7 +68,6 @@ export default function Home() {
       '@type': 'Organization',
       name: 'Fidcent Technologies Limited',
     },
-    datePublished: '2026-01-07',
     description: 'Nigeria\'s digital gifting platform. Create wishlists, coordinate group gifts, and celebrate every occasion with WishCoins. Transform how you give and receive gifts.',
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -96,7 +95,7 @@ export default function Home() {
         name: 'When does WishWing launch?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'WishWing launches on January 7, 2026 on iOS and Android app stores.',
+          text: 'WishWing is launching soon on iOS and Android app stores. Join the waitlist to be notified when we go live!',
         },
       },
       {

@@ -18,7 +18,7 @@ const faqData: FAQItem[] = [
   {
     category: 'General',
     question: 'When does WishWing launch?',
-    answer: 'WishWing launches on January 7, 2026 on iOS and Android app stores.',
+    answer: 'WishWing is launching soon on iOS and Android app stores. Join the waitlist to be notified when we go live!',
   },
   {
     category: 'General',
@@ -111,12 +111,12 @@ const faqData: FAQItem[] = [
   {
     category: 'Support',
     question: 'How do I contact support?',
-    answer: 'Email support@wishwing.com or use in-app chat. We respond within 24 hours.',
+    answer: 'Email hello_wishwing@fidcent.com or use in-app chat. We respond within 24 hours.',
   },
   {
     category: 'Support',
     question: 'What if a gift fails to deliver?',
-    answer: 'Contact support immediately at support@wishwing.com. We\'ll investigate and issue a refund if the failure was on our end.',
+    answer: 'Contact support immediately at hello_wishwing@fidcent.com. We\'ll investigate and issue a refund if the failure was on our end.',
   },
   {
     category: 'Support',
@@ -157,8 +157,8 @@ export default function FAQ() {
           </h2>
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Everything you need to know about WishWing. Can't find an answer? Contact us at{' '}
-            <a href="mailto:support@wishwing.com" className="text-primary-purple hover:underline">
-              support@wishwing.com
+            <a href="mailto:hello_wishwing@fidcent.com" className="text-primary-purple hover:underline">
+              hello_wishwing@fidcent.com
             </a>
           </p>
         </div>
@@ -220,7 +220,7 @@ export default function FAQ() {
           <h3 className="text-2xl font-bold text-white mb-3">Still Have Questions?</h3>
           <p className="text-white/90 mb-6">Our support team is here to help!</p>
           <a
-            href="mailto:support@wishwing.com"
+            href="mailto:hello_wishwing@fidcent.com"
             className="inline-block px-8 py-3 bg-white text-primary-purple font-bold rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-105"
           >
             Contact Support

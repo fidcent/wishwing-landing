@@ -5,13 +5,7 @@ import { analytics } from '@/utils/analytics';
 import LaunchCountdown from './LaunchCountdown';
 
 export default function Hero() {
-  const [isLaunched, setIsLaunched] = useState(false);
-
-  useEffect(() => {
-    const launchDate = new Date('2026-01-07T00:00:00').getTime();
-    const now = new Date().getTime();
-    setIsLaunched(now >= launchDate);
-  }, []);
+  const isLaunched = false; // Set to true when app is available
 
   return (
     <section id="home" className="relative min-h-screen bg-gradient-to-br from-primary-purple via-primary-pink to-primary-purple overflow-hidden flex items-center justify-center pt-24 md:pt-32 pb-20 md:pb-28 px-6 md:px-12">
