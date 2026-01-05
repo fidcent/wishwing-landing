@@ -14,10 +14,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://wishwing.fidcent.com'),
   title: {
-    default: 'WishWing - Never Miss a Birthday Again | Gift App Nigeria',
+    default: 'WishWing by Fidcent - Digital Gifting & Celebration App Nigeria | Send Airtime, Data & Gifts',
     template: '%s | WishWing'
   },
-  description: "WishWing helps you remember every birthday and send perfect gifts. Schedule greetings, send airtime, manage wishlists with WishCoins. Launching Jan 7, 2026 in Nigeria. Get 1000 FREE WishCoins!",
+  description: "Nigeria's #1 digital gifting and celebration app by Fidcent Technologies. Send airtime, data, gifts & greetings for birthdays, anniversaries & special occasions. Manage wishlists, group gifts & earn WishCoins. Launching Jan 7, 2026. Join 10,000+ Nigerians - Get 1000 FREE WishCoins!",
+  alternates: {
+    canonical: 'https://wishwing.fidcent.com',
+  },
   applicationName: 'WishWing',
   referrer: 'origin-when-cross-origin',
   formatDetection: {
@@ -32,23 +35,71 @@ export const metadata: Metadata = {
     },
   },
   keywords: [
-    'birthday app nigeria',
-    'gift app',
-    'wishcoin',
-    'send airtime',
-    'birthday reminder',
-    'wishlist app',
-    'group gifting',
-    'nigerian app',
-    'send data nigeria',
-    'birthday calendar',
-    'automated greetings',
-    'whatsapp birthday message',
-    'MTN airtime',
-    'Glo data',
+    // Core Brand Terms
+    'WishWing',
+    'WishWing app',
+    'WishWing by Fidcent',
+    'Fidcent',
     'Fidcent Technologies',
-    'Lagos app',
-    'Nigerian fintech'
+    'Fidcent Tech',
+    'Fidcent Nigeria',
+    'Fidcent app',
+    
+    // Digital Gifting
+    'digital gifting nigeria',
+    'gift app nigeria',
+    'send gifts nigeria',
+    'online gifting platform',
+    'group gifting nigeria',
+    'wishlist app',
+    'gift reminder app',
+    'celebration app nigeria',
+    
+    // Airtime & Data
+    'send airtime nigeria',
+    'send data nigeria',
+    'buy airtime online',
+    'MTN airtime gift',
+    'Glo data bundle',
+    '9mobile airtime',
+    'Airtel data',
+    'recharge card gift',
+    'data bundle gift',
+    
+    // Birthday & Occasions
+    'birthday app nigeria',
+    'birthday reminder app',
+    'birthday notification app',
+    'nigerian birthday app',
+    'birthday calendar app',
+    'automated birthday greetings',
+    'never forget birthday',
+    'automatic birthday wishes',
+    'whatsapp birthday message',
+    'anniversary reminder',
+    'occasion reminder app',
+    'celebration reminder',
+    
+    // WishCoin
+    'wishcoin',
+    'wishcoin rewards',
+    'earn wishcoins',
+    'free wishcoins',
+    'wishcoin app',
+    
+    // Location-based
+    'Lagos gifting app',
+    'Nigerian app',
+    'Nigeria fintech',
+    'Abuja gifting',
+    'Port Harcourt gifts',
+    
+    // Features
+    'group gift contribution',
+    'wishlist manager',
+    'gift scheduler',
+    'automated gifting',
+    'social gifting platform'
   ],
   authors: [{ name: 'Fidcent Technologies Limited', url: 'https://fidcent.com' }],
   creator: 'Fidcent Technologies Limited',
@@ -75,26 +126,35 @@ export const metadata: Metadata = {
     locale: 'en_NG',
     alternateLocale: ['en_US', 'en_GB'],
     url: 'https://wishwing.fidcent.com',
-    siteName: 'WishWing',
-    title: 'WishWing - Never Miss a Birthday Again | Gift App Nigeria',
-    description: "Smart birthday management app for Nigeria. Send gifts, schedule greetings, manage wishlists with WishCoins. Launching Jan 7, 2026. Get 1000 FREE WishCoins!",
+    siteName: 'WishWing by Fidcent',
+    title: 'WishWing by Fidcent - Digital Gifting & Celebration App Nigeria',
+    description: "🎁 Nigeria's #1 digital gifting & celebration app by Fidcent Technologies. Send airtime, data & gifts for birthdays, anniversaries & special occasions. Earn WishCoins, manage wishlists & group gifts. Launching Jan 7, 2026 - Get 1000 FREE WishCoins!",
     countryName: 'Nigeria',
+    emails: ['hello_wishwing@fidcent.com'],
     images: [
       {
-        url: '/wishwing-logo.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'WishWing - Birthday & Gifting App for Nigeria',
+        alt: 'WishWing by Fidcent - Digital Gifting & Celebration App for Nigeria',
         type: 'image/png',
       },
       {
         url: '/wishwing-logo.png',
         width: 800,
         height: 600,
-        alt: 'WishWing App Interface',
+        alt: 'WishWing App Logo',
         type: 'image/png',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@WishWingNG',
+    creator: '@FidcentTech',
+    title: 'WishWing by Fidcent - Digital Gifting & Celebration App Nigeria',
+    description: "🎁 Nigeria's #1 digital gifting app by Fidcent Tech. Send airtime, data & gifts for all occasions. Earn WishCoins & join 10,000+ users. Get 1000 FREE WishCoins!",
+    images: ['/og-image.png'],
   },
   appLinks: {
     ios: {
@@ -105,17 +165,6 @@ export const metadata: Metadata = {
       package: 'com.wishwing.app',
       app_name: 'WishWing',
     },
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'WishWing - Never Miss a Birthday Again',
-    description: 'Launching Jan 7, 2026. Get 1000 FREE WishCoins! Send airtime, data & gifts to loved ones across Nigeria.',
-    images: ['/wishwing-logo.png'],
-    creator: '@wishwing',
-    site: '@wishwing',
-  },
-  alternates: {
-    canonical: 'https://wishwing.fidcent.com',
   },
   category: 'Lifestyle',
 };
