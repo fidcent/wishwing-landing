@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
             
             <p className="text-neutral-400 text-base mb-8 leading-relaxed max-w-sm">
-              Transform how you celebrate. Nigeria's digital gifting platform for every occasion.
+              Celebrate Better, Together. Nigeria's digital gifting platform for every occasion.
             </p>
 
             {/* Social Links */}

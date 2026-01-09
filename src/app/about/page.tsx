@@ -342,7 +342,7 @@ export default function AboutPage() {
             Be Among the First to Try WishWing
           </h2>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Join the waitlist and never miss another birthday.
+            Join the waitlist and celebrate better, together.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

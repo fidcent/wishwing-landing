@@ -51,7 +51,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up animate-delay-100 font-light">
-            Transform how you celebrate. Make gift-giving personal, social, and memorablefrom birthdays to weddings and every occasion in between.
+            Celebrate Better, Together. Make gift-giving personal, social, and memorablefrom birthdays to weddings and every occasion in between.
           </p>
 
           {/* Launch Countdown */}

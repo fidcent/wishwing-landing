@@ -1,7 +1,7 @@
 {
   "name": "WishWing",
   "short_name": "WishWing",
-  "description": "Never miss a birthday again with WishWing - the smart app for birthday reminders, wishlists, and gifting.",
+  "description": "Celebrate Better, Together - the smart app for birthday reminders, wishlists, and gifting.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#6C63FF",

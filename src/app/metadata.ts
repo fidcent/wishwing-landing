@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 // Home page specific metadata that can be imported and extended
 export const homeMetadata: Metadata = {
-  title: 'WishWing - Birthday Reminder & Gift App Nigeria | Never Miss Birthdays',
+  title: 'WishWing - Birthday Reminder & Gift App Nigeria | Celebrate Better, Together',
   description: "Nigeria's #1 birthday reminder and gifting app. Automatically send gifts, airtime, data & greetings. Manage wishlists, group gifts & earn WishCoins. Launching Jan 7, 2026. Join 10,000+ Nigerians - Get 1000 FREE WishCoins!",
   alternates: {
     canonical: 'https://wishwing.fidcent.com',
@@ -10,7 +10,7 @@ export const homeMetadata: Metadata = {
   openGraph: {
     url: 'https://wishwing.fidcent.com',
     type: 'website',
-    title: 'WishWing - Birthday Reminder & Gift App Nigeria | Never Miss Birthdays',
+    title: 'WishWing - Birthday Reminder & Gift App Nigeria | Celebrate Better, Together',
     description: "🎂 Nigeria's #1 birthday reminder & gifting app. Send airtime, data & gifts automatically. Earn WishCoins, manage wishlists & group gifts. Join 10,000+ users. Launching Jan 7, 2026 - Get 1000 FREE WishCoins!",
     images: [
       {
