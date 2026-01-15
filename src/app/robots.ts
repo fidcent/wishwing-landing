@@ -6,7 +6,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/'],
+        disallow: [
+          '/api/',
+          '/admin/',
+          '/manifest.json',
+          '/*.json$',
+          '/_next/',
+        ],
       },
     ],
     sitemap: 'https://wishwing.fidcent.com/sitemap.xml',
