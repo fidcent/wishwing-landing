@@ -11,6 +11,7 @@ const footerLinks = {
   ],
   company: [
     { label: 'About Us', href: '/about', scroll: false },
+    { label: 'Careers', href: '/careers', scroll: false },
     { label: 'FAQ', href: '/faq', scroll: false },
     { label: 'Blog', href: '/blog', scroll: false },
     { label: 'Contact', href: '/contact', scroll: false },
@@ -136,7 +137,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-neutral-500 text-sm mb-2">
-              © 2025 WishWing. All rights reserved.
+              © 2026 WishWing. All rights reserved.
             </p>
             <p className="text-neutral-600 text-sm">
               A product of{' '}
