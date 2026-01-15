@@ -133,11 +133,11 @@ export const metadata: Metadata = {
     emails: ['hello_wishwing@fidcent.com'],
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'WishWing by Fidcent - Digital Gifting & Celebration App for Nigeria',
-        type: 'image/png',
+        type: 'image/jpg',
       },
       {
         url: '/wishwing-logo.png',
@@ -154,7 +154,7 @@ export const metadata: Metadata = {
     creator: '@FidcentTech',
     title: 'WishWing by Fidcent - Digital Gifting & Celebration App Nigeria',
     description: "🎁 Nigeria's #1 digital gifting app by Fidcent Tech. Send airtime, data & gifts for all occasions. Earn WishCoins & join 10,000+ users. Get 1000 FREE WishCoins!",
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
   appLinks: {
     ios: {
