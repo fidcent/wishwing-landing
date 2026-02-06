@@ -168,7 +168,8 @@ export default function WaitlistForm() {
               <p className="text-white/95 text-sm bg-red-500/20 backdrop-blur-sm px-4 py-2 rounded-xl mb-3">{error}</p>
             )}
             <p className="text-white/80 text-sm md:text-base">
-              Join <span className="font-bold text-white">{waitlistCount === null ? '0' : waitlistCount.toLocaleString()}+</span> early adopters • No spam, launch updates only
+              {/* Join <span className="font-bold text-white">{waitlistCount === null ? '0' : waitlistCount.toLocaleString()}+</span> early adopters • No spam, launch updates only */}
+              Join early adopters • No spam, launch updates only
             </p>
           </form>
         )}
