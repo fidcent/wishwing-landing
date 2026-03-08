@@ -11,6 +11,26 @@ const nextConfig = {
   },
   staticPageGenerationTimeout: 120,
   headers: async () => [
+    // OG images — aggressive public caching so social crawlers benefit
+    {
+      source: '/og/wishlist/(.*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=86400, stale-while-revalidate=3600',
+        },
+      ],
+    },
+    // .well-known files must be accessible to Apple / Google verification servers
+    {
+      source: '/.well-known/(.*)',
+      headers: [
+        {
+          key: 'Access-Control-Allow-Origin',
+          value: '*',
+        },
+      ],
+    },
     {
       source: '/(.*)',
       headers: [
