@@ -10,7 +10,7 @@ const ASSET_LINKS = [
     relation: ['delegate_permission/common.handle_all_urls'],
     target: {
       namespace: 'android_app',
-      package_name: 'com.fidcent.wishwing',
+      package_name: 'org.fidcent.wishwing',
       sha256_cert_fingerprints: ['<YOUR_SHA256_FINGERPRINT>'],
     },
   },

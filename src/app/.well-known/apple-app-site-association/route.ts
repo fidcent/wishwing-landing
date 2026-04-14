@@ -8,7 +8,7 @@ const AASA = {
   applinks: {
     details: [
       {
-        appIDs: ['<TEAM_ID>.com.fidcent.wishwing'],
+        appIDs: ['6SVX253P8Y.org.fidcent.wishwing'],
         components: [
           {
             '/': '/wishlists/shared/*',
