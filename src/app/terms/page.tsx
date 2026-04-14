@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation';
+import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
@@ -19,16 +20,7 @@ export default function TermsPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-5 bg-gradient-primary text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">Terms of Service</h1>
-          <p className="text-xl opacity-90">
-            Last updated: November 19, 2025
-          </p>
-        </div>
-      </section>
+      <PageHeader badge="Legal" title="Terms of Service" subtitle="Last updated: November 19, 2025" />
 
       {/* Content Section */}
       <section className="py-20 px-5 bg-white">

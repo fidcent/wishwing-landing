@@ -5,13 +5,13 @@ import Script from 'next/script';
 import { analytics, useScrollDepth } from '@/utils/analytics';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import WaitlistForm from '@/components/WaitlistForm';
 import ProblemSection from '@/components/ProblemSection';
-import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
+import VisionSection from '@/components/VisionSection';
 import WishCoinSection from '@/components/WishCoinSection';
 import GiftingShowcase from '@/components/GiftingShowcase';
-import VisionSection from '@/components/VisionSection';
+import Testimonials from '@/components/Testimonials';
+import HomepageFAQ from '@/components/HomepageFAQ';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
@@ -216,13 +216,13 @@ export default function Home() {
       <main id="main-content" className="min-h-screen">
         <Navigation />
         <Hero />
-        <WaitlistForm />
         <ProblemSection />
-        <Features />
         <HowItWorks />
+        {/* <VisionSection /> */}
         <WishCoinSection />
         <GiftingShowcase />
-        <VisionSection />
+        <Testimonials />
+        <HomepageFAQ />
         <CTASection />
         <Footer />
       </main>

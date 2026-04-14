@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation';
+import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -56,38 +57,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-28 md:pt-32 pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-neutral-900 via-primary-900 to-neutral-900 text-white relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-slow" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow" />
-        </div>
-        
-        <div className="relative max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8 animate-fade-in">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-            </svg>
-            <span className="font-semibold text-sm">About WishWing</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight animate-fade-in-up">
-            Nigeria's Digital
-            <br />
-            <span className="text-gradient-alt">Gifting Infrastructure</span>
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-6 leading-relaxed max-w-3xl mx-auto animate-fade-in-up animate-delay-100 font-light">
-            Transforming cash-based gift-giving into meaningful celebrations
-          </p>
-          
-          <p className="text-base md:text-lg text-white/80 animate-fade-in-up animate-delay-200">
-            A product of Fidcent Technologies Limited
-          </p>
-        </div>
-      </section>
+      <PageHeader badge="About WishWing" title="Nigeria's Digital Gifting Infrastructure" subtitle="Transforming cash-based gift-giving into meaningful celebrations" />
 
       {/* Company Profile */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
