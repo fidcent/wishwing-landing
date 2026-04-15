@@ -10,6 +10,16 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   staticPageGenerationTimeout: 120,
+  rewrites: async () => [
+    {
+      source: '/.well-known/assetlinks.json',
+      destination: '/well-known/assetlinks.json',
+    },
+    {
+      source: '/.well-known/apple-app-site-association',
+      destination: '/well-known/apple-app-site-association',
+    },
+  ],
   headers: async () => [
     // OG images — aggressive public caching so social crawlers benefit
     {
