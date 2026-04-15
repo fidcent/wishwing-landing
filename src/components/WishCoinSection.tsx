@@ -1,137 +1,128 @@
 'use client';
 
-import { analytics } from '@/utils/analytics';
+import Image from 'next/image';
+import { images } from '@/data/images';
 
-const benefits = [
+const smallBenefits = [
   {
-    icon: '💝',
-    title: 'More Meaningful',
-    description: 'Unlike cash transfers, WishCoins are designed specifically for gifting'
-  },
-  {
-    icon: '🤝',
-    title: 'Pool Together',
-    description: 'Friends and family can contribute to group gifts easily'
-  },
-  {
-    icon: '🎁',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+    ),
     title: 'Flexible Redemption',
-    description: 'Redeem for airtime, data, gift cards, or real gifts'
+    description: 'Redeem for airtime, data, gift cards, or real gifts.',
   },
   {
-    icon: '⚡',
-    title: 'Easy Top-Up',
-    description: 'Add funds via cards, bank transfer, or mobile money'
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: 'Save Time',
+    description: 'Send gifts instantly — no wrapping, no delivery.',
   },
   {
-    icon: '🔒',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
     title: 'Secure & Transparent',
-    description: 'Every transaction is protected and fully traceable'
+    description: 'Every transaction is protected and fully traceable.',
   },
 ];
 
 export default function WishCoinSection() {
   return (
-    <section id="wishcoins" className="relative py-20 md:py-32 px-6 bg-gradient-to-br from-neutral-900 via-primary-900 to-neutral-900 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow" />
+    <section id="wishcoins" className="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-neutral-900 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          {/* Large Coin Icon */}
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 shadow-2xl mb-6 animate-scale-in">
-            <span className="text-5xl">🪙</span>
+        <div className="text-center mb-14">
+          <div className="inline-block px-4 py-1.5 rounded-full border border-white/20 mb-5">
+            <span className="text-white/90 font-medium text-sm">WishCoin</span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
-            WishCoins: The Currency of{' '}
-            <span className="text-gradient-alt">Celebration</span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-4">
+            WishCoins: The Currency of Celebration
           </h2>
-          
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-4 leading-relaxed animate-fade-in-up animate-delay-100">
-            Unlike impersonal cash transfers, WishCoins are designed specifically for gifting. 
-            Flexible, meaningful, and perfect for any celebration.
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto">
+            Unlike impersonal cash transfers, WishCoins are designed specifically for gifting. Flexible, meaningful, and perfect for any celebration.
           </p>
-          
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 animate-fade-in-up animate-delay-200">
-            <span className="text-2xl">₦</span>
-            <span className="text-white font-bold text-lg">2.5 per WishCoin</span>
-            <span className="text-white/70">•</span>
-            <span className="text-white/90">Start gifting today</span>
+        </div>
+
+        {/* Coin Image */}
+        <div className="flex justify-center mb-14">
+          <Image
+            src={images.wishcoins3d}
+            alt="WishCoins 3D coins"
+            width={200}
+            height={200}
+            className="w-40 md:w-52 h-auto drop-shadow-2xl"
+          />
+        </div>
+
+        {/* Two main cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          {/* More Meaningful */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-3">More Meaningful</h3>
+            <p className="text-white/60 mb-6">
+              WishCoins carry intention — they say &ldquo;I thought about this&rdquo; instead of just sending money.
+            </p>
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-2">
+                {['bg-purple-500', 'bg-blue-500', 'bg-pink-500'].map((color, i) => (
+                  <div key={i} className={`w-8 h-8 rounded-full ${color} border-2 border-neutral-900 flex items-center justify-center text-white text-xs font-bold`}>
+                    {['M', 'T', 'A'][i]}
+                  </div>
+                ))}
+              </div>
+              <div className="text-white/50 text-sm">Mary, Timothy, and more</div>
+            </div>
+          </div>
+
+          {/* Pool Together */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-3">Pool Together</h3>
+            <p className="text-white/60 mb-6">
+              Friends and family can contribute to group gifts easily — no awkward coordination needed.
+            </p>
+            <div className="flex items-center gap-2">
+              {['bg-emerald-500', 'bg-amber-500', 'bg-cyan-500', 'bg-rose-500'].map((color, i) => (
+                <div key={i} className="flex items-center gap-1">
+                  <div className={`w-7 h-7 rounded-full ${color} flex items-center justify-center text-white text-xs font-bold`}>
+                    {['K', 'S', 'D', 'I'][i]}
+                  </div>
+                  {i < 3 && (
+                    <svg className="w-4 h-4 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Benefits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {benefits.map((benefit, idx) => (
-            <div
-              key={benefit.title}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-fade-in-up"
-              style={{ animationDelay: `${idx * 100 + 300}ms` }}
-            >
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 rounded-3xl transition-all duration-300" />
-              
-              <div className="relative">
-                {/* Icon */}
-                <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                  {benefit.icon}
-                </div>
-                
-                {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {benefit.title}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-white/80 leading-relaxed">
-                  {benefit.description}
-                </p>
+        {/* Small benefits row */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {smallBenefits.map((benefit, idx) => (
+            <div key={idx} className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white shrink-0">
+                {benefit.icon}
+              </div>
+              <div>
+                <h4 className="text-white font-semibold text-sm mb-1">{benefit.title}</h4>
+                <p className="text-white/50 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             </div>
           ))}
-          
-          {/* Call-to-Action Card */}
-          <div className="group relative bg-gradient-to-br from-primary-600 to-accent-600 rounded-3xl p-8 border border-white/20 hover:shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
-            <div className="relative text-center flex flex-col items-center justify-center h-full">
-              <div className="text-4xl mb-4">✨</div>
-              <h3 className="text-xl font-bold text-white mb-3">
-                Ready to Start?
-              </h3>
-              <p className="text-white/90 mb-6">
-                Join the waitlist and get 1,000 FREE WishCoins
-              </p>
-              <a
-                href="#early-access"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.querySelector('#early-access');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                  analytics.trackCTAClick('Join Waitlist', 'CTA Section');
-                }}
-                className="px-6 py-3 bg-white text-primary-600 rounded-full font-semibold hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer"
-              >
-                Join Waitlist
-              </a>
-              {/* <button 
-                onClick={() => {
-                  const waitlistSection = document.querySelector('#waitlist');
-                  if (waitlistSection) {
-                    waitlistSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-                className="px-6 py-3 bg-white text-primary-600 rounded-full font-semibold hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer"
-              >
-                Join Waitlist
-              </button> */}
-            </div>
-          </div>
         </div>
       </div>
     </section>

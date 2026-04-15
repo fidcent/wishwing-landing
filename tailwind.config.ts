@@ -50,8 +50,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ['Cal Sans', 'Inter', 'system-ui', 'sans-serif'],
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Clash Display', 'Georgia', 'serif'],
+        sans: ['Switzer', 'system-ui', '-apple-system', 'sans-serif'],
+        logo: ['Clash Display', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       fontSize: {

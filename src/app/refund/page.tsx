@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import Navigation from '@/components/Navigation';
+import PageHeader from '@/components/PageHeader';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Refund & Cancellation Policy - WishWing',
@@ -7,21 +10,9 @@ export const metadata = {
 
 export default function RefundPolicyPage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-primary-purple to-primary-pink py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
-            Refund & Cancellation Policy
-          </h1>
-          <p className="text-lg md:text-xl text-white/90">
-            Clear terms for refunds and cancellations
-          </p>
-          <p className="text-sm text-white/80 mt-4">
-            Last Updated: November 27, 2025
-          </p>
-        </div>
-      </div>
+    <main className="min-h-screen">
+      <Navigation />
+      <PageHeader badge="Legal" title="Refund & Cancellation Policy" subtitle="Last updated: November 27, 2025" />
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-6 py-16">
@@ -282,6 +273,7 @@ export default function RefundPolicyPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

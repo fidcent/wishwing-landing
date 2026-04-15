@@ -1,58 +1,50 @@
 'use client';
 
-const visionPoints = [
-  {
-    emoji: '🎯',
-    title: 'Own the Occasion Layer',
-    description: 'Become Nigeria\'s default tool whenever there\'s something to celebrate',
-  },
-  {
-    emoji: '🤝',
-    title: 'Connect Everyone',
-    description: 'Build an ecosystem linking individuals, merchants, and corporates around celebrations',
-  },
-  {
-    emoji: '🌍',
-    title: 'Expand Across Africa',
-    description: 'After establishing market leadership in Nigeria, scale to the entire continent',
-  },
-];
+import { peopleAvatars } from '@/data/people';
 
 export default function VisionSection() {
   return (
-    <section className="py-20 md:py-28 px-6 md:px-12 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1.5 bg-primary-100 rounded-full mb-4">
-            <span className="text-primary-600 font-medium text-sm">Our Vision</span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-neutral-900 mb-4 leading-tight">
-            Building Africa's Celebration Ecosystem
-          </h2>
-          <p className="text-base md:text-lg text-neutral-600 max-w-3xl mx-auto">
-            WishWing isn't just an app—it's the future of how Africa celebrates. We're creating digital infrastructure that makes every occasion meaningful.
+    <section
+      className="relative py-24 md:py-32 overflow-hidden"
+      style={{ background: 'linear-gradient(180deg, #DBD4FF 0%, #FFFFFF 50%)' }}
+    >
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* People Arc */}
+        <div className="relative mb-12 h-32 sm:h-40 md:h-48">
+          {peopleAvatars.map((person, index) => {
+            const total = peopleAvatars.length;
+            const angle = (Math.PI * (index / (total - 1))) - Math.PI;
+            const radiusX = 220;
+            const radiusY = 80;
+            const x = Math.cos(angle) * radiusX;
+            const y = Math.sin(angle) * radiusY - 20;
+            const size = index % 3 === 0 ? 'w-12 h-12 text-sm' : index % 3 === 1 ? 'w-10 h-10 text-xs' : 'w-14 h-14 text-base';
+
+            return (
+              <div
+                key={index}
+                className={`absolute ${person.color} ${size} rounded-full border-2 ${person.borderColor} flex items-center justify-center text-white font-bold shadow-md`}
+                style={{
+                  left: `calc(50% + ${x}px)`,
+                  top: `calc(50% + ${y}px)`,
+                  transform: 'translate(-50%, -50%)',
+                }}
+              >
+                {person.initials}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Quote */}
+        <blockquote className="max-w-3xl mx-auto">
+          <p className="font-display text-2xl sm:text-3xl md:text-4xl text-neutral-900 leading-snug">
+            No more &ldquo;Happy birthday + transfer&rdquo;.{' '}
+            <br className="hidden sm:block" />
+            Celebrate people in a way that actually feels{' '}
+            <em className="text-gradient not-italic">special</em>.
           </p>
-        </div>
-
-        {/* Vision Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {visionPoints.map((point, index) => (
-            <div
-              key={index}
-              className="text-center p-8 bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl border border-primary-200 hover:border-primary-600 transition-all duration-300 hover:shadow-strong"
-            >
-              <div className="text-5xl mb-4">{point.emoji}</div>
-              <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                {point.title}
-              </h3>
-              <p className="text-neutral-600 text-sm leading-relaxed">
-                {point.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
+        </blockquote>
       </div>
     </section>
   );

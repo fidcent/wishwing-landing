@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["6SVX253P8Y.org.fidcent.wishwing"],
+        "components": [
+          {
+            "/": "/wishlists/shared/*",
+            "comment": "Shared wishlist deep links"
+          }
+        ]
+      }
+    ]
+  }
+}

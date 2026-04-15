@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation';
+import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
@@ -19,20 +20,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-5 bg-gradient-to-br from-neutral-900 via-primary-900 to-neutral-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-slow" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow" />
-        </div>
-        <div className="relative max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl md:text-2xl text-white/90">
-            We'd love to hear from you. Get in touch!
-          </p>
-        </div>
-      </section>
+      <PageHeader badge="Support" title="Contact Us" subtitle="We'd love to hear from you. Get in touch!" />
 
       {/* Contact Form & Info Section */}
       <section className="py-20 px-5 bg-neutral-50">
