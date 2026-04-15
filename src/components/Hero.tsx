@@ -17,10 +17,23 @@ export default function Hero() {
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#DBD4FF]/30 rounded-full blur-3xl" />
       </div>
 
+      {/* Desktop Phone Mockup - absolutely positioned */}
+      <div className="hidden lg:block absolute right-[5%] xl:right-[8%] top-16 bottom-0 w-[420px] xl:w-[480px] 2xl:w-[520px] z-10">
+        <Image
+          src={images.heroMockup}
+          alt="WishWing app mockup showing the gifting experience"
+          width={550}
+          height={750}
+          className="w-full h-auto drop-shadow-2xl"
+          style={{ minHeight: '110%' }}
+          priority
+        />
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
           {/* Left - Content */}
-          <div className="flex-1 text-center lg:text-left max-w-xl lg:max-w-none">
+          <div className="flex-1 text-center lg:text-left max-w-xl lg:max-w-[55%]">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-neutral-200/60 shadow-sm mb-8">
               <span className="px-2 py-0.5 bg-emerald-500 text-white text-xs font-semibold rounded-full">New</span>
@@ -87,9 +100,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right - Phone Mockup */}
-          <div className="flex-1 flex justify-center lg:justify-end relative">
-            <div className="relative w-[320px] sm:w-[400px] md:w-[480px] lg:w-[550px] lg:absolute lg:-right-8 lg:-bottom-20 xl:-right-12">
+          {/* Right - Phone Mockup (mobile) */}
+          <div className="flex-1 flex justify-center lg:hidden">
+            <div className="relative w-[320px] sm:w-[400px] md:w-[480px]">
               <Image
                 src={images.heroMockup}
                 alt="WishWing app mockup showing the gifting experience"
