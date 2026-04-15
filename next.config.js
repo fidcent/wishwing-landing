@@ -10,6 +10,18 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   staticPageGenerationTimeout: 120,
+  rewrites: async () => ({
+    beforeFiles: [
+      {
+        source: '/.well-known/assetlinks.json',
+        destination: '/api/well-known/assetlinks',
+      },
+      {
+        source: '/.well-known/apple-app-site-association',
+        destination: '/api/well-known/apple-app-site-association',
+      },
+    ],
+  }),
   headers: async () => [
     // OG images — aggressive public caching so social crawlers benefit
     {
@@ -18,30 +30,6 @@ const nextConfig = {
         {
           key: 'Cache-Control',
           value: 'public, max-age=86400, stale-while-revalidate=3600',
-        },
-      ],
-    },
-    // .well-known files — accessible to Apple / Google verification servers
-    {
-      source: '/.well-known/:path*',
-      headers: [
-        {
-          key: 'Access-Control-Allow-Origin',
-          value: '*',
-        },
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=3600',
-        },
-      ],
-    },
-    // apple-app-site-association has no file extension — ensure correct Content-Type
-    {
-      source: '/.well-known/apple-app-site-association',
-      headers: [
-        {
-          key: 'Content-Type',
-          value: 'application/json',
         },
       ],
     },
