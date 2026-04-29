@@ -81,33 +81,68 @@ export async function generateMetadata({
   params: { identifier: string };
 }>): Promise<Metadata> {
   const { data } = await getPublicProfile(params.identifier);
+  const profileUrl = `https://wishwing.fidcent.com/user/${params.identifier}`;
 
   if (!data) {
     return {
       title: 'User Profile | WishWing',
-      description: 'View this user profile on WishWing.',
+      description: 'View this user profile on WishWing — Nigeria\'s digital gifting platform.',
+      openGraph: {
+        title: 'User Profile | WishWing',
+        description: 'View this user profile on WishWing — Nigeria\'s digital gifting platform.',
+        url: profileUrl,
+        images: [{ url: 'https://wishwing.fidcent.com/og-image.jpg', width: 1200, height: 630, alt: 'WishWing — Digital Gifting Platform' }],
+        type: 'profile',
+        siteName: 'WishWing by Fidcent',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        site: '@WishWingNG',
+        title: 'User Profile | WishWing',
+        description: 'View this user profile on WishWing — Nigeria\'s digital gifting platform.',
+        images: ['https://wishwing.fidcent.com/og-image.jpg'],
+      },
     };
   }
 
-  const title = `${data.displayName} on WishWing`;
-  const description = `${data.isPremium ? '⭐ Premium Member • ' : ''}Join ${data.displayName} and discover their WishWing profile.`;
-  const ogImage = `https://wishwing.fidcent.com/og/user/${params.identifier}.png`;
+  const title = `${data.displayName} (@${data.username}) on WishWing`;
+  const description = `${data.isPremium ? '⭐ Premium Member • ' : ''}View ${data.displayName}'s profile on WishWing and send them gifts! Nigeria's digital gifting platform.`;
+  const ogImage = `https://wishwing.fidcent.com/og/user/${params.identifier}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: profileUrl,
+    },
     openGraph: {
       title,
       description,
-      url: `https://wishwing.fidcent.com/user/${params.identifier}`,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      url: profileUrl,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: `${data.displayName}'s WishWing profile` }],
       type: 'profile',
+      siteName: 'WishWing by Fidcent',
+      locale: 'en_NG',
+      firstName: data.firstName,
+      lastName: data.lastName,
+      username: data.username,
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      site: '@WishWingNG',
+      creator: '@WishWingNG',
+      title: `🪄 ${data.displayName} on WishWing`,
       description,
       images: [ogImage],
+    },
+    other: {
+      'al:ios:url': `wishwing://user/${params.identifier}`,
+      'al:ios:app_name': 'WishWing',
+      'al:android:url': `wishwing://user/${params.identifier}`,
+      'al:android:app_name': 'WishWing',
+      'al:android:package': 'com.wishwing.app',
+      'al:web:url': profileUrl,
+      'profile:username': data.username,
     },
   };
 }
@@ -133,10 +168,33 @@ export default async function UserProfilePage({
       }
     : undefined;
 
+  // Build JSON-LD structured data
+  const jsonLd = data
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: data.displayName,
+        alternateName: `@${data.username}`,
+        url: `https://wishwing.fidcent.com/user/${identifier}`,
+        identifier: data.fidId,
+        memberOf: {
+          '@type': 'Organization',
+          name: 'WishWing by Fidcent',
+          url: 'https://wishwing.fidcent.com',
+        },
+      }
+    : null;
+
   return (
     <>
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
       <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-neutral-50 via-primary-50 to-accent-50 pt-20 pb-16">
+      <main className="min-h-screen bg-gradient-to-br from-neutral-50 via-primary-50/30 to-accent-50/20 pt-20 pb-16">
         <UserProfileView
           identifier={identifier}
           initialData={enrichedData}
