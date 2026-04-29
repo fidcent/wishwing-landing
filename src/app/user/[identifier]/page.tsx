@@ -105,7 +105,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${data.displayName} (@${data.username}) on WishWing`;
+  const title = `Check out ${data.displayName} (@${data.fidId}) on WishWing 💫`;
   const description = `${data.isPremium ? '⭐ Premium Member • ' : ''}View ${data.displayName}'s profile on WishWing and send them gifts! Nigeria's digital gifting platform.`;
   const ogImage = `https://wishwing.fidcent.com/og/user/${params.identifier}`;
 
@@ -162,27 +162,27 @@ export default async function UserProfilePage({
   // Construct deepLink and webPreviewUrl locally
   const enrichedData = data
     ? {
-        ...data,
-        deepLink: `wishwing://user/${identifier}`,
-        webPreviewUrl: `https://wishwing.fidcent.com/user/${identifier}`,
-      }
+      ...data,
+      deepLink: `wishwing://user/${identifier}`,
+      webPreviewUrl: `https://wishwing.fidcent.com/user/${identifier}`,
+    }
     : undefined;
 
   // Build JSON-LD structured data
   const jsonLd = data
     ? {
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: data.displayName,
-        alternateName: `@${data.username}`,
-        url: `https://wishwing.fidcent.com/user/${identifier}`,
-        identifier: data.fidId,
-        memberOf: {
-          '@type': 'Organization',
-          name: 'WishWing by Fidcent',
-          url: 'https://wishwing.fidcent.com',
-        },
-      }
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: data.displayName,
+      alternateName: `@${data.username}`,
+      url: `https://wishwing.fidcent.com/user/${identifier}`,
+      identifier: data.fidId,
+      memberOf: {
+        '@type': 'Organization',
+        name: 'WishWing by Fidcent',
+        url: 'https://wishwing.fidcent.com',
+      },
+    }
     : null;
 
   return (
