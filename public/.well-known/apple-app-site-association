@@ -8,6 +8,10 @@
           {
             "/": "/wishlists/shared/*",
             "comment": "Shared wishlist deep links"
+          },
+          {
+            "/": "/user/*",
+            "comment": "User profile deep links"
           }
         ]
       }

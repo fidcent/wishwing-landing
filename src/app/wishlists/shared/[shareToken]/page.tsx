@@ -5,7 +5,7 @@ import SharedWishlistView from '@/components/SharedWishlistView';
 
 // Adjust if your wishlist API lives at a different base path
 const WISHLIST_API_BASE =
-  process.env.WISHLIST_API_URL ?? 'https://api-dev.fidcent.com/wishlist/api/v1';
+  process.env.WISHLIST_API_URL ?? 'https://api.fidcent.com/wishlist/api/v1';
 
 // ---------------------------------------------------------------------------
 // Types
