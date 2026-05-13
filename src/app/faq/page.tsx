@@ -6,10 +6,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions - WishWing',
-  description: 'Find answers to common questions about WishWing - pricing, features, launch date, payment methods, and more. Get help with birthday reminders and gifting.',
+  description: 'Find answers to common questions about WishWing — pricing, features, WishCoins, wishlists, gifting, account security, and more.',
   openGraph: {
     title: 'WishWing FAQ - All Your Questions Answered',
-    description: 'Everything you need to know about WishWing birthday and gifting app.',
+    description: 'Everything you need to know about WishWing — the contact-driven, birthday-based gifting app.',
     url: 'https://wishwing.fidcent.com/faq',
   },
   alternates: {
@@ -21,7 +21,7 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <PageHeader badge="Common Questions" title="Frequently asked questions" subtitle="Everything you need to know about WishWing" />
+      <PageHeader badge="Common Questions" title="Frequently asked questions" subtitle="Last updated: May 13, 2026" />
 
       <FAQ />
       
