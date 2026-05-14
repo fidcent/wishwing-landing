@@ -14,10 +14,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://wishwing.fidcent.com'),
   title: {
-    default: 'WishWing — Send Gifts That Actually Feel Like Gifts',
+    default: 'WishWing — Celebrate Better, Together',
     template: '%s | WishWing'
   },
-  description: "Celebrating the people you love shouldn't feel like a chore. WishWing makes every birthday, wedding, and special occasion personal — wishlists, group gifts, auto-reminders, and WishCoins. Built for Nigeria.",
+  description: "Send gifts and greetings, create wishlists, and never miss a special moment. WishWing makes gifting personal for birthdays, weddings, and every occasion in Nigeria.",
   alternates: {
     canonical: 'https://wishwing.fidcent.com',
   },
@@ -135,8 +135,8 @@ export const metadata: Metadata = {
     alternateLocale: ['en_US', 'en_GB'],
     url: 'https://wishwing.fidcent.com',
     siteName: 'WishWing by Fidcent',
-    title: 'WishWing — Send Gifts That Actually Feel Like Gifts',
-    description: "🎁 Gifting that actually says 'I care.' Wishlists, group gifts, birthday reminders & WishCoins — built for Nigeria.",
+    title: 'WishWing — Celebrate Better, Together',
+    description: "🎁 Send gifts and greetings, create wishlists, and never miss a special moment. Built for Nigeria.",
     countryName: 'Nigeria',
     emails: ['hello_wishwing@fidcent.com'],
     images: [
@@ -144,7 +144,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'WishWing — Send Gifts That Actually Feel Like Gifts',
+        alt: 'WishWing — Celebrate Better, Together',
         type: 'image/png',
       },
     ],
@@ -153,8 +153,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@fidcenttech',
     creator: '@fidcenttech',
-    title: 'WishWing — Send Gifts That Actually Feel Like Gifts',
-    description: "🎁 Because a bank transfer doesn't say 'I care.' Wishlists, group gifts, birthday reminders & WishCoins — built for Nigeria.",
+    title: 'WishWing — Celebrate Better, Together',
+    description: "🎁 Send gifts and greetings, create wishlists, and never miss a special moment. Built for Nigeria.",
     images: ['/og-image.png'],
   },
   appLinks: {
