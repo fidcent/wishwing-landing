@@ -1,8 +1,8 @@
 import Navigation from '@/components/Navigation';
 import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
 import type { Metadata } from 'next';
+import { socialLinks, contactInfo } from '@/data/links';
 
 export const metadata: Metadata = {
   title: 'About WishWing - Nigeria\'s Digital Gifting Platform | Fidcent Technologies',
@@ -17,317 +17,298 @@ export const metadata: Metadata = {
   },
 };
 
-const socialLinks = [
-  { 
-    name: 'Facebook', 
-    icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>,
-    url: 'https://facebook.com/wishwing' 
-  },
-  { 
-    name: 'Twitter/X', 
-    icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>,
-    url: 'https://twitter.com/wishwing' 
-  },
-  { 
-    name: 'Instagram', 
-    icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>,
-    url: 'https://instagram.com/wishwing' 
-  },
-  { 
-    name: 'LinkedIn', 
-    icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>,
-    url: 'https://linkedin.com/company/fidcent' 
-  },
-  { 
-    name: 'TikTok', 
-    icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>,
-    url: '#', 
-    badge: 'Coming Soon' 
-  },
-];
-
-const contactInfo = [
-  { label: 'Support Email', value: 'hello_wishwing@fidcent.com', icon: '📧', link: 'mailto:hello_wishwing@fidcent.com' },
-  { label: 'Help & Inquiries', value: 'hello_wishwing@fidcent.com', icon: '❓', link: 'mailto:hello_wishwing@fidcent.com' },
-  { label: 'Business Inquiries', value: 'business@fidcent.com', icon: '💼', link: 'mailto:business@fidcent.com' },
-  { label: 'Response Time', value: 'Within 24 hours', icon: '⏱️', link: null },
-];
-
 export default function AboutPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <PageHeader badge="About WishWing" title="Nigeria's Digital Gifting Infrastructure" subtitle="Transforming cash-based gift-giving into meaningful celebrations" />
+      {/* <PageHeader
+        badge="About WishWing"
+        title="Nigeria's gifting layer"
+        subtitle="We're turning 'happy birthday + transfer' into something that actually feels like a celebration."
+      /> */}
 
-      {/* Company Profile */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6 tracking-tight">
-              About Fidcent Technologies
-            </h2>
-            <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Fidcent Technologies Limited is a Nigerian fintech and software development company 
-              focused on building innovative digital solutions for African markets.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
-            <div className="text-center p-8 bg-gradient-to-br from-primary-50 to-accent-50 rounded-3xl border border-neutral-200/50 hover:shadow-strong transition-all duration-300">
-              <div className="text-4xl mb-3">📅</div>
-              <h3 className="font-bold text-lg text-neutral-900 mb-2">Founded</h3>
-              <p className="text-neutral-600">2024</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-primary-50 to-accent-50 rounded-3xl border border-neutral-200/50 hover:shadow-strong transition-all duration-300">
-              <div className="text-4xl mb-3">🏢</div>
-              <h3 className="font-bold text-lg text-neutral-900 mb-2">Headquarters</h3>
-              <p className="text-neutral-600">Lagos, Nigeria</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-primary-50 to-accent-50 rounded-3xl border border-neutral-200/50 hover:shadow-strong transition-all duration-300">
-              <div className="text-4xl mb-3">🌍</div>
-              <h3 className="font-bold text-lg text-neutral-900 mb-2">Focus</h3>
-              <p className="text-neutral-600">African Markets</p>
-            </div>
-          </div>
-
-          <div className="p-8 md:p-12 bg-gradient-to-br from-neutral-50 to-white rounded-3xl border border-neutral-200">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-4">Company Website</h3>
-            <a 
-              href="https://fidcent.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-600 hover:underline text-lg font-semibold"
-            >
-              🌐 fidcent.com
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-20 px-5 bg-gradient-to-br from-neutral-50 to-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-neutral-900 mb-12 text-center">
-            Our Mission
-          </h2>
-          <div className="space-y-6 text-lg text-neutral-600 leading-relaxed">
-            <p className="text-xl font-semibold text-primary-600">
-              To become Nigeria's default digital gifting infrastructure—transforming informal, 
-              cash-based gift-giving into structured, social, and emotionally meaningful experiences.
-            </p>
-            <p>
-              Gift-giving in Nigeria is frequent and culturally important, but current options are fragmented. 
-              Cash transfers feel impersonal, physical gifting is logistically complex, group gifting is hard 
-              to coordinate, and people often miss important occasions.
-            </p>
-            <p>
-              WishWing is a social gifting platform powered by WishCoins—our virtual currency. 
-              We sit between payments, social interaction, and commerce, focusing on occasions 
-              and relationships rather than transactions.
-            </p>
-            <p>
-              Our strategic goal is to own the "occasion layer" in Nigeria—becoming the default tool 
-              people use whenever there is something to celebrate, from birthdays to weddings, 
-              holidays, and corporate events.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Market Opportunity */}
-      {/* <section className="py-20 px-5 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
-              Why Nigeria Loves WishWing
-            </h2>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-              Built for Nigeria's thriving digital economy and strong gifting culture
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="text-center p-6 bg-gradient-to-br from-primary-purple/5 to-white rounded-2xl border border-primary-purple/20">
-              <div className="text-3xl mb-2">🇳🇬</div>
-              <div className="text-3xl font-bold text-primary-purple mb-1">220M</div>
-              <div className="text-sm text-text-secondary">People in Nigeria</div>
-            </div>
-            <div className="text-center p-6 bg-gradient-to-br from-primary-purple/5 to-white rounded-2xl border border-primary-purple/20">
-              <div className="text-3xl mb-2">📱</div>
-              <div className="text-3xl font-bold text-primary-purple mb-1">88-99M</div>
-              <div className="text-sm text-text-secondary">Smartphone Users</div>
-            </div>
-            <div className="text-center p-6 bg-gradient-to-br from-primary-purple/5 to-white rounded-2xl border border-primary-purple/20">
-              <div className="text-3xl mb-2">💰</div>
-              <div className="text-3xl font-bold text-primary-purple mb-1">50M+</div>
-              <div className="text-sm text-text-secondary">Digital Payment Users</div>
-            </div>
-            <div className="text-center p-6 bg-gradient-to-br from-primary-purple/5 to-white rounded-2xl border border-primary-purple/20">
-              <div className="text-3xl mb-2">📈</div>
-              <div className="text-3xl font-bold text-primary-purple mb-1">25-30%</div>
-              <div className="text-sm text-text-secondary">YoY Payment Growth</div>
-            </div>
-          </div>
-
-          <div className="mt-12 p-8 bg-gradient-to-r from-primary-purple to-primary-pink rounded-3xl text-center">
-            <p className="text-white text-xl font-semibold">
-              🎉 Strong Gifting Culture: Nigerians spend ₦50,000-150,000 annually on gifts
-            </p>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Values Section */}
-      <section className="py-20 px-5 bg-neutral-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-12 text-center">
-            Our Values
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-soft border border-neutral-200/50 hover:shadow-strong transition-all duration-300">
-              <div className="text-4xl mb-4">💜</div>
-              <h3 className="text-xl font-bold text-neutral-900 mb-3">Emotion Over Transaction</h3>
-              <p className="text-neutral-600">
-                We believe gifting should feel personal and meaningful, not like another bank transfer.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-soft border border-neutral-200/50 hover:shadow-strong transition-all duration-300">
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-bold text-neutral-900 mb-3">Social by Design</h3>
-              <p className="text-neutral-600">
-                Celebrations are better together. Our features encourage sharing, contributing, and connecting.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-soft border border-neutral-200/50 hover:shadow-strong transition-all duration-300">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-neutral-900 mb-3">Occasion-First</h3>
-              <p className="text-neutral-600">
-                Every feature is built around celebrations—birthdays, weddings, holidays, and corporate events.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 px-5 bg-white">
+      {/* Mission */}
+      <section
+        className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+        style={{ background: 'linear-gradient(180deg, #DBD4FF 0%, #FFFFFF 60%)' }}
+      >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            Built by Fidcent Technologies Limited
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-neutral-200/60 bg-white/80 shadow-sm mb-8 text-sm text-neutral-600 font-medium">
+            Our Mission
+          </span>
+          <h2 className="font-display text-3xl md:text-5xl text-neutral-900 leading-tight mb-8">
+            Own the{' '}
+            <span className="text-gradient">occasion layer</span>{' '}
+            in Nigeria.
           </h2>
-          <p className="text-lg text-neutral-600 leading-relaxed mb-8">
-            WishWing is proudly developed by{' '}
-            <a 
-              href="https://fidcent.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-600 hover:underline font-semibold"
-            >
-              Fidcent Technologies Limited
-            </a>{' '}
-            , a technology company committed to creating innovative solutions that 
-            enhance everyday life and strengthen human connections.
+          <p className="text-lg md:text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto mb-6">
+            Gift-giving is frequent and culturally important in Nigeria—but the current options are broken. Cash transfers feel impersonal. Physical gifting is logistically hard. Group gifting is nearly impossible to coordinate.
           </p>
-          <a
-            href="https://fidcent.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-full font-semibold hover:scale-105 transition-transform shadow-strong hover:shadow-glow-primary"
-          >
-            Learn More About Fidcent
-          </a>
+          <p className="text-lg md:text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+            WishWing is a social gifting platform powered by WishCoins. We sit between payments, social connection, and commerce—focused entirely on occasions and the people who make them matter.
+          </p>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-20 px-5 bg-gradient-to-br from-neutral-50 to-white">
-        <div className="max-w-5xl mx-auto">
+      {/* Problems we solve */}
+      <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-neutral-900 mb-6">
-              Contact Information
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-neutral-200/60 bg-neutral-50 shadow-sm mb-6 text-sm text-neutral-600 font-medium">
+              The Problem
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-4">
+              Gifting in Nigeria is broken
             </h2>
-            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Have questions? We're here to help!
+            <p className="text-neutral-500 max-w-2xl mx-auto">
+              We&apos;re not here to fix a niche problem. We&apos;re building the infrastructure that millions of Nigerians need for every celebration.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            {contactInfo.map((info) => (
-              <div key={info.label} className="p-6 bg-white rounded-2xl border border-neutral-200/50 hover:border-primary-600 hover:shadow-strong transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl">{info.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-lg text-neutral-900 mb-2">{info.label}</h3>
-                    {info.link ? (
-                      <a href={info.link} className="text-primary-600 hover:underline">
-                        {info.value}
-                      </a>
-                    ) : (
-                      <p className="text-neutral-600">{info.value}</p>
-                    )}
-                  </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                  </svg>
+                ),
+                title: 'Cash feels impersonal',
+                desc: "A bank transfer doesn't say \"I care.\" It says \"I had to.\"",
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                ),
+                title: 'Group gifting is chaos',
+                desc: 'Collecting contributions from 10 people across WhatsApp groups is exhausting.',
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 9v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H18v-.008zm0 2.25h.008v.008H18V15z" />
+                  </svg>
+                ),
+                title: 'Occasions get missed',
+                desc: 'No centralised reminder system means important moments slip by unnoticed.',
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                  </svg>
+                ),
+                title: 'Physical gifting is hard',
+                desc: 'Logistics, delivery, and returns make physical gifts more stress than joy.',
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="p-7 bg-neutral-50 rounded-3xl border border-neutral-200/50 hover:border-primary-300 hover:shadow-strong transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+                  {item.icon}
                 </div>
+                <h3 className="font-semibold text-neutral-900 text-base mb-2">{item.title}</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Social Media */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-8">Follow Us on Social Media</h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {socialLinks.map((social) => (
-                social.badge ? (
-                  <div
-                    key={social.name}
-                    className="relative flex items-center gap-3 px-6 py-3 bg-white border-2 border-neutral-200 rounded-full opacity-60 cursor-not-allowed"
-                  >
-                    <span className="text-neutral-400">{social.icon}</span>
-                    <span className="font-semibold text-neutral-900">{social.name}</span>
-                    <span className="absolute -top-2 -right-2 px-2 py-1 bg-yellow-400 text-neutral-900 text-xs font-bold rounded-full">
-                      {social.badge}
-                    </span>
-                  </div>
-                ) : (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-6 py-3 bg-white border-2 border-neutral-200 rounded-full hover:border-primary-600 hover:shadow-strong transition-all duration-300 hover:scale-105 group"
-                  >
-                    <span className="text-neutral-600 group-hover:text-primary-600 transition-colors">{social.icon}</span>
-                    <span className="font-semibold text-neutral-900">{social.name}</span>
-                  </a>
-                )
+      {/* Values */}
+      <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-neutral-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-neutral-200/60 bg-white shadow-sm mb-6 text-sm text-neutral-600 font-medium">
+              What we believe
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-4">
+              Our values
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                ),
+                title: 'Emotion over transaction',
+                desc: 'We believe gifting should feel personal and meaningful—not like another bank transfer. Every feature is designed to carry feeling, not just funds.',
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                ),
+                title: 'Social by design',
+                desc: 'Celebrations are better together. Every feature is built to encourage sharing, contributing, and connecting—not just sending money.',
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 9v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008z" />
+                  </svg>
+                ),
+                title: 'Occasion-first',
+                desc: 'We build everything around celebrations—birthdays, weddings, holidays, and corporate events. The occasion is the product.',
+              },
+            ].map((val) => (
+              <div key={val.title} className="bg-white p-8 rounded-3xl border border-neutral-200/50 hover:border-primary-300 hover:shadow-strong transition-all duration-300 group">
+                <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+                  {val.icon}
+                </div>
+                <h3 className="font-semibold text-neutral-900 text-lg mb-3">{val.title}</h3>
+                <p className="text-neutral-500 leading-relaxed text-sm">{val.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Fidcent */}
+      <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-neutral-200/60 bg-neutral-50 shadow-sm mb-6 text-sm text-neutral-600 font-medium">
+                Who built this
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-6 leading-tight">
+                Built by{' '}
+                <a
+                  href="https://fidcent.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gradient hover:opacity-80 transition-opacity"
+                >
+                  Fidcent Technologies
+                </a>
+              </h2>
+              <p className="text-neutral-600 leading-relaxed mb-8">
+                Fidcent Technologies Limited is a Nigerian software development company building innovative digital solutions for African markets. WishWing is our flagship consumer product.
+              </p>
+              <a
+                href="https://fidcent.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-xl font-medium text-sm hover:bg-neutral-800 transition-colors"
+              >
+                Visit fidcent.com
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+              </a>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { label: 'Founded', value: '2024', icon: '📅' },
+                { label: 'Headquarters', value: 'Lagos, Nigeria', icon: '🏙️' },
+                { label: 'Focus', value: 'African Markets', icon: '🌍' },
+                { label: 'Flagship Product', value: 'WishWing', icon: '🎁' },
+              ].map((stat) => (
+                <div key={stat.label} className="p-6 bg-neutral-50 rounded-3xl border border-neutral-200/50">
+                  <div className="text-2xl mb-2">{stat.icon}</div>
+                  <div className="text-xs text-neutral-400 uppercase tracking-widest mb-1">{stat.label}</div>
+                  <div className="font-semibold text-neutral-900 text-sm">{stat.value}</div>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Be Among the First to Try WishWing
-          </h2>
-          <p className="text-lg md:text-xl mb-8 opacity-90">
-            Join the waitlist and celebrate better, together.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/#early-access"
-              className="px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold shadow-strong hover:-translate-y-0.5 transition-all"
-            >
-              Join Waitlist
-            </Link>
-            <Link
-              href="/"
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white rounded-xl font-semibold hover:bg-white/20 transition-all"
-            >
-              Learn More
-            </Link>
+      {/* Contact & Social */}
+      <section
+        className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #DBD4FF 0%, #FFFFFF 60%)' }}
+      >
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-neutral-200/60 bg-white/80 shadow-sm mb-6 text-sm text-neutral-600 font-medium">
+              Get in touch
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-4">
+              We&apos;d love to hear from you
+            </h2>
+            <p className="text-neutral-500 max-w-xl mx-auto">
+              Questions, partnerships, press enquiries—reach out and we&apos;ll get back to you within 24 hours.
+            </p>
           </div>
+
+          <div className="grid sm:grid-cols-3 gap-6 mb-14">
+            {[
+              {
+                label: 'Support',
+                value: contactInfo.supportEmail,
+                href: `mailto:${contactInfo.supportEmail}`,
+                icon: (
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  </svg>
+                ),
+              },
+              {
+                label: 'Business',
+                value: contactInfo.businessEmail,
+                href: `mailto:${contactInfo.businessEmail}`,
+                icon: (
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+                  </svg>
+                ),
+              },
+              {
+                label: 'Response time',
+                value: 'Within 24 hours',
+                href: null as string | null,
+                icon: (
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+              },
+            ].map((item) => (
+              <div key={item.label} className="p-6 bg-white rounded-3xl border border-neutral-200/50 hover:border-primary-300 hover:shadow-strong transition-all duration-300">
+                <div className="w-10 h-10 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center mb-4">
+                  {item.icon}
+                </div>
+                <div className="text-xs text-neutral-400 uppercase tracking-widest mb-1">{item.label}</div>
+                {item.href ? (
+                  <a href={item.href} className="text-sm font-medium text-primary-600 hover:underline break-all">
+                    {item.value}
+                  </a>
+                ) : (
+                  <p className="text-sm font-medium text-neutral-900">{item.value}</p>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Social links */}
+          {/* <div className="text-center">
+            <p className="text-sm text-neutral-500 mb-6 uppercase tracking-widest font-medium">Follow us</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 bg-white rounded-full border border-neutral-200/80 text-sm font-medium text-neutral-700 hover:border-primary-400 hover:text-primary-600 hover:shadow-strong transition-all duration-200"
+                >
+                  {social.name}
+                </a>
+              ))}
+            </div>
+          </div> */}
         </div>
       </section>
 

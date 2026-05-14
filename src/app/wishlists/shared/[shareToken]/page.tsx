@@ -90,7 +90,7 @@ export async function generateMetadata({
       openGraph: {
         title: 'Shared Wishlist | WishWing',
         description: 'View this shared wishlist on WishWing — Nigeria\'s digital gifting platform.',
-        images: [{ url: 'https://wishwing.fidcent.com/og-image.jpg', width: 1200, height: 630, alt: 'WishWing — Digital Gifting Platform' }],
+        images: [{ url: 'https://wishwing.fidcent.com/og-image.png', width: 1200, height: 630, alt: 'WishWing — Digital Gifting Platform' }],
         type: 'website',
         siteName: 'WishWing by Fidcent',
       },
@@ -99,7 +99,7 @@ export async function generateMetadata({
         site: '@WishWingNG',
         title: 'Shared Wishlist | WishWing',
         description: 'View this shared wishlist on WishWing — Nigeria\'s digital gifting platform.',
-        images: ['https://wishwing.fidcent.com/og-image.jpg'],
+        images: ['https://wishwing.fidcent.com/og-image.png'],
       },
     };
   }

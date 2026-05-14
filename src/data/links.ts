@@ -5,10 +5,10 @@ export const appLinks = {
 };
 
 export const socialLinks = [
-  { name: 'Facebook', href: 'https://facebook.com/wishwing' },
-  { name: 'Instagram', href: 'https://instagram.com/wishwing' },
-  { name: 'X (Twitter)', href: 'https://twitter.com/wishwing' },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/wishwing' },
+  { name: 'Facebook', href: 'https://facebook.com/fidcent' },
+  { name: 'Instagram', href: 'https://instagram.com/fidcent' },
+  { name: 'X (Twitter)', href: 'https://twitter.com/fidcent' },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/fidcent' },
 ];
 
 export const contactInfo = {

@@ -215,28 +215,7 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <div className="mt-8 text-center">
-            <p className="text-neutral-600">
-              Still have questions?{' '}
-              <a href="/contact" className="text-primary-600 font-semibold hover:underline">
-                Contact Support
-              </a>
-            </p>
-          </div>
         </div>
-      </section>
-
-      {/* Powered by Fidcent */}
-      <section className="py-16 px-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-center">
-        <p className="text-lg mb-2 opacity-90">A product of</p>
-        <a
-          href="https://fidcent.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-3xl font-bold hover:underline"
-        >
-          Fidcent Technologies Limited
-        </a>
       </section>
 
       <Footer />

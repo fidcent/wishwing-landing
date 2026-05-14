@@ -16,6 +16,6 @@ export const footerQuickLinks = [
 export const footerCompanyLinks = [
   { label: 'About Us', href: '/about' },
   { label: 'Contact Us', href: '/contact' },
-  { label: 'Careers', href: '/careers' },
+  // { label: 'Careers', href: '/careers' },
   { label: 'FAQs', href: '/faq' },
 ];

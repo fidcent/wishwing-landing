@@ -174,23 +174,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Powered by Fidcent */}
-      <section className="py-16 px-5 bg-gradient-primary text-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-lg mb-4 opacity-90">
-            WishWing is a product of
-          </p>
-          <a
-            href="https://fidcent.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl font-bold hover:underline"
-          >
-            Fidcent Technologies Limited
-          </a>
-        </div>
-      </section>
-
       <Footer />
     </main>
   );

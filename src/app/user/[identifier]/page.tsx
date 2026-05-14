@@ -91,7 +91,7 @@ export async function generateMetadata({
         title: 'User Profile | WishWing',
         description: 'View this user profile on WishWing — Nigeria\'s digital gifting platform.',
         url: profileUrl,
-        images: [{ url: 'https://wishwing.fidcent.com/og-image.jpg', width: 1200, height: 630, alt: 'WishWing — Digital Gifting Platform' }],
+        images: [{ url: 'https://wishwing.fidcent.com/og-image.png', width: 1200, height: 630, alt: 'WishWing — Digital Gifting Platform' }],
         type: 'profile',
         siteName: 'WishWing by Fidcent',
       },
@@ -100,7 +100,7 @@ export async function generateMetadata({
         site: '@WishWingNG',
         title: 'User Profile | WishWing',
         description: 'View this user profile on WishWing — Nigeria\'s digital gifting platform.',
-        images: ['https://wishwing.fidcent.com/og-image.jpg'],
+        images: ['https://wishwing.fidcent.com/og-image.png'],
       },
     };
   }
