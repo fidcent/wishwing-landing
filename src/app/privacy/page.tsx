@@ -4,12 +4,19 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - WishWing App Store Ready',
-  description: 'Read WishWing\'s Privacy Policy. Learn how we collect, use, and protect your data in compliance with applicable privacy laws.',
+  title: 'Your Privacy Matters to Us — WishWing Privacy Policy',
+  description: 'We handle your personal information with care. Read how WishWing collects, uses, and protects your data.',
   openGraph: {
-    title: 'WishWing Privacy Policy',
-    description: 'Learn how WishWing collects, uses, and protects your personal data.',
+    title: 'Your Privacy Matters — WishWing Privacy Policy',
+    description: 'We handle your data with care. Read how WishWing collects, uses, and protects your personal information.',
     url: 'https://wishwing.fidcent.com/privacy',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@fidcenttech',
+    title: 'Your Privacy Matters — WishWing Privacy Policy',
+    description: 'We handle your data with care. Read how WishWing collects, uses, and protects your personal information.',
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://wishwing.fidcent.com/privacy',

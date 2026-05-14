@@ -4,12 +4,19 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - WishWing App Store Ready',
-  description: 'Read WishWing\'s Terms of Service. Understand the terms and conditions for using our contact-driven and birthday-based gifting platform.',
+  title: 'How We Work Together — WishWing Terms of Service',
+  description: 'The rules that keep WishWing safe, fair, and joyful for everyone. Read our Terms of Service.',
   openGraph: {
-    title: 'WishWing Terms of Service',
-    description: 'Terms and conditions for using WishWing.',
+    title: 'How We Work Together — WishWing Terms of Service',
+    description: 'The terms that keep WishWing safe and joyful for everyone who celebrates here.',
     url: 'https://wishwing.fidcent.com/terms',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@fidcenttech',
+    title: 'How We Work Together — WishWing Terms of Service',
+    description: 'The terms that keep WishWing safe and joyful for everyone who celebrates here.',
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://wishwing.fidcent.com/terms',

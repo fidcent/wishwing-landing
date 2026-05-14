@@ -4,12 +4,19 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Get in Touch',
-  description: 'Have questions about WishWing? Get in touch with our team. We\'re here to help with birthday reminders, wishlists, and gifting.',
+  title: "Talk to Us — We're Real People Who Love Celebrations",
+  description: "Got a question, idea, or just want to say hi? Our team is here and happy to help. Reach out — we'd love to hear from you.",
   openGraph: {
-    title: 'Contact WishWing',
-    description: 'Get in touch with the WishWing team.',
+    title: 'Talk to the WishWing Team',
+    description: "Got a question or just want to say hi? We're real people who love celebrations and we'd love to hear from you.",
     url: 'https://wishwing.fidcent.com/contact',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@fidcenttech',
+    title: 'Talk to the WishWing Team',
+    description: "Got a question or just want to say hi? We're real people who love celebrations — reach out.",
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://wishwing.fidcent.com/contact',

@@ -4,12 +4,19 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Careers - Join Our Team',
-  description: 'Join the WishWing team at Fidcent. Explore career opportunities and help us build the future of birthday celebrations.',
+  title: 'Build Something That Brings Joy — Join the WishWing Team',
+  description: 'We believe gifting should feel as good to give as it does to receive. If you want to help change how Nigeria celebrates, come build with us.',
   openGraph: {
-    title: 'Careers at WishWing',
-    description: 'Join our team and help build the future of birthday celebrations.',
+    title: 'Build Something That Brings Joy — Join WishWing',
+    description: "We're building Nigeria's gifting infrastructure. If you believe celebrations deserve better, come build with us.",
     url: 'https://wishwing.fidcent.com/careers',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@fidcenttech',
+    title: 'Build Something That Brings Joy — Join WishWing',
+    description: "We're building Nigeria's gifting infrastructure. If you believe celebrations deserve better, come build with us.",
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://wishwing.fidcent.com/careers',

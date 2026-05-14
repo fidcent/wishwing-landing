@@ -1,16 +1,22 @@
 import Navigation from '@/components/Navigation';
-import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
-import { socialLinks, contactInfo } from '@/data/links';
+import { contactInfo } from '@/data/links';
 
 export const metadata: Metadata = {
-  title: 'About WishWing - Nigeria\'s Digital Gifting Platform | Fidcent Technologies',
-  description: 'WishWing transforms cash-based gift-giving into meaningful celebrations. Built by Fidcent Technologies, we\'re creating Nigeria\'s default digital gifting infrastructure.',
+  title: 'Why We Built WishWing — Gifting Should Feel Like Love, Not a Task',
+  description: 'We built WishWing because the people you love deserve more than a bank alert. Learn about our mission to make every celebration in Nigeria feel personal, joyful, and effortless.',
   openGraph: {
-    title: 'About WishWing - Nigeria\'s Social Gifting Platform',
-    description: 'Learn about WishWing\'s mission to own the occasion layer in Nigeria—becoming the default tool for birthdays, weddings, holidays, and every celebration.',
+    title: 'Why We Built WishWing — Gifting Should Feel Like Love',
+    description: "We started WishWing because a bank transfer doesn't say 'I care.' Learn how we're making every celebration in Nigeria feel personal and joyful.",
     url: 'https://wishwing.fidcent.com/about',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@fidcenttech',
+    title: 'Why We Built WishWing — Gifting Should Feel Like Love',
+    description: "We started WishWing because a bank transfer doesn't say 'I care.' Learn how we're making every celebration in Nigeria feel personal and joyful.",
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://wishwing.fidcent.com/about',
