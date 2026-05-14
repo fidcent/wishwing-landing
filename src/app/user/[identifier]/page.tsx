@@ -140,7 +140,7 @@ export async function generateMetadata({
       'al:ios:app_name': 'WishWing',
       'al:android:url': `wishwing://user/${params.identifier}`,
       'al:android:app_name': 'WishWing',
-      'al:android:package': 'com.wishwing.app',
+      'al:android:package': 'org.fidcent.wishwing',
       'al:web:url': profileUrl,
       'profile:username': data.username,
     },
