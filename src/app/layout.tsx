@@ -14,10 +14,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://wishwing.fidcent.com'),
   title: {
-    default: 'WishWing by Fidcent - Digital Gifting & Celebration App Nigeria | Send Airtime, Data & Gifts',
+    default: 'WishWing — Celebrate Better, Together',
     template: '%s | WishWing'
   },
-  description: "Nigeria's #1 digital gifting and celebration app by Fidcent Technologies. Send airtime, data, gifts & greetings for birthdays, anniversaries & special occasions. Manage wishlists, group gifts & earn WishCoins. Launching Jan 7, 2026. Join 10,000+ Nigerians - Get 1000 FREE WishCoins!",
+  description: "Send gifts and greetings, create wishlists, and never miss a special moment. WishWing makes gifting personal for birthdays, weddings, and every occasion in Nigeria.",
   alternates: {
     canonical: 'https://wishwing.fidcent.com',
   },
@@ -29,9 +29,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   verification: {
-    google: 'your-google-verification-code',
     other: {
-      'facebook-domain-verification': 'your-facebook-verification-code',
+      'facebook-domain-verification': 'empofbr0sn1bdot3yq1fz542cpqoxu',
     },
   },
   keywords: [
@@ -136,42 +135,35 @@ export const metadata: Metadata = {
     alternateLocale: ['en_US', 'en_GB'],
     url: 'https://wishwing.fidcent.com',
     siteName: 'WishWing by Fidcent',
-    title: 'WishWing by Fidcent - Digital Gifting & Celebration App Nigeria',
-    description: "🎁 Nigeria's #1 digital gifting & celebration app by Fidcent Technologies. Send airtime, data & gifts for birthdays, anniversaries & special occasions. Earn WishCoins, manage wishlists & group gifts. Launching Jan 7, 2026 - Get 1000 FREE WishCoins!",
+    title: 'WishWing — Celebrate Better, Together',
+    description: "🎁 Send gifts and greetings, create wishlists, and never miss a special moment. Built for Nigeria.",
     countryName: 'Nigeria',
     emails: ['hello_wishwing@fidcent.com'],
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'WishWing by Fidcent - Digital Gifting & Celebration App for Nigeria',
-        type: 'image/jpg',
-      },
-      {
-        url: '/wishwing-logo.png',
-        width: 800,
-        height: 600,
-        alt: 'WishWing App Logo',
+        alt: 'WishWing — Celebrate Better, Together',
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@WishWingNG',
-    creator: '@FidcentTech',
-    title: 'WishWing by Fidcent - Digital Gifting & Celebration App Nigeria',
-    description: "🎁 Nigeria's #1 digital gifting app by Fidcent Tech. Send airtime, data & gifts for all occasions. Earn WishCoins & join 10,000+ users. Get 1000 FREE WishCoins!",
-    images: ['/og-image.jpg'],
+    site: '@fidcenttech',
+    creator: '@fidcenttech',
+    title: 'WishWing — Celebrate Better, Together',
+    description: "🎁 Send gifts and greetings, create wishlists, and never miss a special moment. Built for Nigeria.",
+    images: ['/og-image.png'],
   },
   appLinks: {
     ios: {
       url: 'wishwing://app',
-      app_store_id: 'your-app-store-id',
+      app_store_id: '6762185672',
     },
     android: {
-      package: 'com.wishwing.app',
+      package: 'org.fidcent.wishwing',
       app_name: 'WishWing',
     },
   },
@@ -184,7 +176,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-NG" prefix="og: https://ogp.me/ns#">
+    <html lang="en-NG">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />

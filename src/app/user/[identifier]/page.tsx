@@ -85,28 +85,28 @@ export async function generateMetadata({
 
   if (!data) {
     return {
-      title: 'User Profile | WishWing',
-      description: 'View this user profile on WishWing — Nigeria\'s digital gifting platform.',
+      title: "Someone's on WishWing | WishWing",
+      description: "Find people you care about and send them gifts they'll actually love — on WishWing, Nigeria's gifting platform.",
       openGraph: {
-        title: 'User Profile | WishWing',
-        description: 'View this user profile on WishWing — Nigeria\'s digital gifting platform.',
+        title: "Someone's on WishWing | WishWing",
+        description: "Find people you care about and send them gifts they'll actually love.",
         url: profileUrl,
-        images: [{ url: 'https://wishwing.fidcent.com/og-image.jpg', width: 1200, height: 630, alt: 'WishWing — Digital Gifting Platform' }],
+        images: [{ url: 'https://wishwing.fidcent.com/og-image.png', width: 1200, height: 630, alt: 'WishWing — Send Gifts That Actually Feel Like Gifts' }],
         type: 'profile',
         siteName: 'WishWing by Fidcent',
       },
       twitter: {
         card: 'summary_large_image',
-        site: '@WishWingNG',
-        title: 'User Profile | WishWing',
-        description: 'View this user profile on WishWing — Nigeria\'s digital gifting platform.',
-        images: ['https://wishwing.fidcent.com/og-image.jpg'],
+        site: '@fidcenttech',
+        title: "Someone's on WishWing | WishWing",
+        description: "Find people you care about and send them gifts they'll actually love.",
+        images: ['https://wishwing.fidcent.com/og-image.png'],
       },
     };
   }
 
-  const title = `Check out ${data.displayName} (@${data.fidId}) on WishWing 💫`;
-  const description = `${data.isPremium ? '⭐ Premium Member • ' : ''}View ${data.displayName}'s profile on WishWing and send them gifts! Nigeria's digital gifting platform.`;
+  const title = `${data.displayName} is on WishWing 🪄`;
+  const description = `${data.isPremium ? '⭐ Premium Member • ' : ''}Something special coming up? See what ${data.displayName} would love to receive — send them the perfect gift on WishWing.`;
   const ogImage = `https://wishwing.fidcent.com/og/user/${params.identifier}`;
 
   return {
@@ -129,10 +129,10 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@WishWingNG',
-      creator: '@WishWingNG',
-      title: `🪄 ${data.displayName} on WishWing`,
-      description,
+      site: '@fidcenttech',
+      creator: '@fidcenttech',
+      title: `🪄 ${data.displayName} is on WishWing`,
+      description: `Gift ${data.displayName} something they actually want. See their WishWing profile.`,
       images: [ogImage],
     },
     other: {
@@ -140,7 +140,7 @@ export async function generateMetadata({
       'al:ios:app_name': 'WishWing',
       'al:android:url': `wishwing://user/${params.identifier}`,
       'al:android:app_name': 'WishWing',
-      'al:android:package': 'com.wishwing.app',
+      'al:android:package': 'org.fidcent.wishwing',
       'al:web:url': profileUrl,
       'profile:username': data.username,
     },

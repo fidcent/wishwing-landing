@@ -85,31 +85,31 @@ export async function generateMetadata({
 
   if (!data) {
     return {
-      title: 'Shared Wishlist | WishWing',
-      description: 'View this shared wishlist on WishWing — Nigeria\'s digital gifting platform.',
+      title: 'A Wish Is Waiting | WishWing',
+      description: "Someone shared a wishlist with you on WishWing — where gifting feels as good to give as it does to receive.",
       openGraph: {
-        title: 'Shared Wishlist | WishWing',
-        description: 'View this shared wishlist on WishWing — Nigeria\'s digital gifting platform.',
-        images: [{ url: 'https://wishwing.fidcent.com/og-image.jpg', width: 1200, height: 630, alt: 'WishWing — Digital Gifting Platform' }],
+        title: 'A Wish Is Waiting | WishWing',
+        description: "Someone shared a wishlist with you on WishWing — where gifting feels as good to give as it does to receive.",
+        images: [{ url: 'https://wishwing.fidcent.com/og-image.png', width: 1200, height: 630, alt: 'WishWing — Send Gifts That Actually Feel Like Gifts' }],
         type: 'website',
         siteName: 'WishWing by Fidcent',
       },
       twitter: {
         card: 'summary_large_image',
-        site: '@WishWingNG',
-        title: 'Shared Wishlist | WishWing',
-        description: 'View this shared wishlist on WishWing — Nigeria\'s digital gifting platform.',
-        images: ['https://wishwing.fidcent.com/og-image.jpg'],
+        site: '@fidcenttech',
+        title: 'A Wish Is Waiting | WishWing',
+        description: "Someone shared a wishlist with you on WishWing — where gifting feels as good to give as it does to receive.",
+        images: ['https://wishwing.fidcent.com/og-image.png'],
       },
     };
   }
 
   const { wishlist, ownerName, shareMessage, webPreviewUrl } = data;
   const pct = Math.min(100, Math.max(0, wishlist.progressPercentage ?? 0));
-  const title = `${ownerName}'s Wishlist — ${wishlist.title}`;
+  const title = `${ownerName} has a wish ✨ — ${wishlist.title}`;
   const description = shareMessage
     ?? wishlist.description
-    ?? `Help ${ownerName} reach their wishlist goal! ${pct}% funded with ${wishlist.itemCount} items.`;
+    ?? `Help ${ownerName} make it happen! ${pct}% funded so far, with ${wishlist.itemCount} things they'd love.`;
   const ogImage = `https://wishwing.fidcent.com/og/wishlist/${params.shareToken}`;
 
   return {
@@ -129,10 +129,10 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@WishWingNG',
-      creator: '@WishWingNG',
-      title: `🎁 ${title}`,
-      description: `${pct}% funded • ${wishlist.itemCount} items — ${description}`,
+      site: '@fidcenttech',
+      creator: '@fidcenttech',
+      title: `✨ ${ownerName}'s wish — ${wishlist.title}`,
+      description: `✨ ${ownerName} shared their wishlist — ${pct}% funded. See what they're wishing for.`,
       images: [ogImage],
     },
     other: {
@@ -140,7 +140,7 @@ export async function generateMetadata({
       'al:ios:app_name': 'WishWing',
       'al:android:url': data.deepLink,
       'al:android:app_name': 'WishWing',
-      'al:android:package': 'com.wishwing.app',
+      'al:android:package': 'org.fidcent.wishwing',
       'al:web:url': webPreviewUrl,
     },
   };

@@ -20,7 +20,7 @@ const steps = [
     number: 3,
     title: 'Celebrate Together',
     description: 'Send meaningful gifts, coordinate group contributions, and make every moment special — all from one place.',
-    image: images.mockupSendGift,
+    image: images.mockupMutualsWishlists,
   },
 ];
 

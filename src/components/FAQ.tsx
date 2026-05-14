@@ -18,7 +18,7 @@ export default function FAQ() {
     <section id="faq" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-neutral-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -28,7 +28,7 @@ export default function FAQ() {
               {contactInfo.supportEmail}
             </a>
           </p>
-        </div>
+        </div> */}
 
         {/* Category filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-10">

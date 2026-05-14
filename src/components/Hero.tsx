@@ -18,14 +18,13 @@ export default function Hero() {
       </div>
 
       {/* Desktop Phone Mockup - absolutely positioned */}
-      <div className="hidden lg:block absolute right-[5%] xl:right-[8%] top-16 bottom-0 w-[420px] xl:w-[480px] 2xl:w-[520px] z-10">
+      <div className="hidden lg:block absolute right-0 top-16 bottom-0 left-[45%] xl:left-[48%] z-10 overflow-hidden">
         <Image
           src={images.heroMockup}
           alt="WishWing app mockup showing the gifting experience"
-          width={550}
-          height={750}
-          className="w-full h-auto drop-shadow-2xl"
-          style={{ minHeight: '110%' }}
+          width={1500}
+          height={810}
+          className="h-full w-auto absolute top-0 left-1/2 -translate-x-1/2 drop-shadow-2xl"
           priority
         />
       </div>
@@ -106,8 +105,8 @@ export default function Hero() {
               <Image
                 src={images.heroMockup}
                 alt="WishWing app mockup showing the gifting experience"
-                width={550}
-                height={750}
+                width={1500}
+                height={810}
                 className="w-full h-auto drop-shadow-2xl"
                 priority
               />

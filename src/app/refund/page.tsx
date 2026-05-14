@@ -2,10 +2,26 @@ import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import PageHeader from '@/components/PageHeader';
 import Footer from '@/components/Footer';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Refund & Cancellation Policy - WishWing',
-  description: 'WishWing refund and cancellation policy for WishCoins, physical gifts, airtime, data, and scheduled greetings.',
+export const metadata: Metadata = {
+  title: "We've Got You Covered \u2014 WishWing Refund & Cancellation Policy",
+  description: "We want every celebration to go perfectly. If something doesn't, here's how we make it right \u2014 our refund and cancellation policy.",
+  openGraph: {
+    title: "We've Got You Covered \u2014 WishWing Refund Policy",
+    description: "We want every celebration to go perfectly. If something doesn't, here's how we make it right.",
+    url: 'https://wishwing.fidcent.com/refund',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@fidcenttech',
+    title: "We've Got You Covered \u2014 WishWing Refund Policy",
+    description: "We want every celebration to go perfectly. If something doesn't, here's how we make it right.",
+    images: ['/og-image.png'],
+  },
+  alternates: {
+    canonical: 'https://wishwing.fidcent.com/refund',
+  },
 };
 
 export default function RefundPolicyPage() {

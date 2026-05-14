@@ -4,12 +4,19 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Get in Touch',
-  description: 'Have questions about WishWing? Get in touch with our team. We\'re here to help with birthday reminders, wishlists, and gifting.',
+  title: "Talk to Us — We're Real People Who Love Celebrations",
+  description: "Got a question, idea, or just want to say hi? Our team is here and happy to help. Reach out — we'd love to hear from you.",
   openGraph: {
-    title: 'Contact WishWing',
-    description: 'Get in touch with the WishWing team.',
+    title: 'Talk to the WishWing Team',
+    description: "Got a question or just want to say hi? We're real people who love celebrations and we'd love to hear from you.",
     url: 'https://wishwing.fidcent.com/contact',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@fidcenttech',
+    title: 'Talk to the WishWing Team',
+    description: "Got a question or just want to say hi? We're real people who love celebrations — reach out.",
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://wishwing.fidcent.com/contact',
@@ -215,28 +222,7 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <div className="mt-8 text-center">
-            <p className="text-neutral-600">
-              Still have questions?{' '}
-              <a href="/contact" className="text-primary-600 font-semibold hover:underline">
-                Contact Support
-              </a>
-            </p>
-          </div>
         </div>
-      </section>
-
-      {/* Powered by Fidcent */}
-      <section className="py-16 px-5 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-center">
-        <p className="text-lg mb-2 opacity-90">A product of</p>
-        <a
-          href="https://fidcent.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-3xl font-bold hover:underline"
-        >
-          Fidcent Technologies Limited
-        </a>
       </section>
 
       <Footer />

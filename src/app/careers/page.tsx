@@ -4,12 +4,19 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Careers - Join Our Team',
-  description: 'Join the WishWing team at Fidcent. Explore career opportunities and help us build the future of birthday celebrations.',
+  title: 'Build Something That Brings Joy — Join the WishWing Team',
+  description: 'We believe gifting should feel as good to give as it does to receive. If you want to help change how Nigeria celebrates, come build with us.',
   openGraph: {
-    title: 'Careers at WishWing',
-    description: 'Join our team and help build the future of birthday celebrations.',
+    title: 'Build Something That Brings Joy — Join WishWing',
+    description: "We're building Nigeria's gifting infrastructure. If you believe celebrations deserve better, come build with us.",
     url: 'https://wishwing.fidcent.com/careers',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@fidcenttech',
+    title: 'Build Something That Brings Joy — Join WishWing',
+    description: "We're building Nigeria's gifting infrastructure. If you believe celebrations deserve better, come build with us.",
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://wishwing.fidcent.com/careers',
@@ -171,23 +178,6 @@ export default function CareersPage() {
               Send General Application
             </button>
           </div>
-        </div>
-      </section>
-
-      {/* Powered by Fidcent */}
-      <section className="py-16 px-5 bg-gradient-primary text-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-lg mb-4 opacity-90">
-            WishWing is a product of
-          </p>
-          <a
-            href="https://fidcent.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl font-bold hover:underline"
-          >
-            Fidcent Technologies Limited
-          </a>
         </div>
       </section>
 

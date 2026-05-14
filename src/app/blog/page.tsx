@@ -4,12 +4,19 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog - Tips, Stories & Updates',
-  description: 'Latest news, birthday celebration tips, and gifting insights from WishWing. Stay updated with our blog.',
+  title: 'Stories, Tips & Celebrations — The WishWing Blog',
+  description: 'Ideas for celebrating the people who matter. Gifting inspiration, occasion tips, and real stories from the WishWing community in Nigeria.',
   openGraph: {
-    title: 'WishWing Blog - Birthday Tips & Updates',
-    description: 'Latest news and tips for celebrating birthdays and gifting.',
+    title: 'The WishWing Blog — Stories, Tips & Celebrations',
+    description: "Ideas for celebrating the people who matter. Gifting inspiration, occasion tips, and real stories from Nigeria's gifting community.",
     url: 'https://wishwing.fidcent.com/blog',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@fidcenttech',
+    title: 'The WishWing Blog — Stories, Tips & Celebrations',
+    description: "Ideas for celebrating the people who matter. Gifting inspiration and occasion tips from Nigeria's gifting community.",
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://wishwing.fidcent.com/blog',

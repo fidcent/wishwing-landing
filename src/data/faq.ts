@@ -13,33 +13,33 @@ export const homepageFAQs: FAQItem[] = [
   },
   {
     category: 'General',
-    question: 'How is this different from just sending money?',
-    answer: 'WishWing turns gifting into an experience. Instead of an impersonal bank transfer, you can create wishlists, coordinate group gifts, schedule messages, and make every occasion feel intentional.',
-  },
-  {
-    category: 'General',
-    question: 'How do I receive gifts?',
-    answer: 'When someone sends you a gift through WishWing, you receive WishCoins which you can redeem for airtime, data, gift cards, or cash out to your bank account.',
-  },
-  {
-    category: 'Features',
-    question: 'Can multiple people contribute to one gift?',
-    answer: 'Yes! WishWing makes group gifting easy. Create a group gift, set a goal amount, share the link, and everyone can contribute any amount they choose.',
+    question: 'What is FidId?',
+    answer: 'FidId is a unique identifier for users across all Fidcent apps and web platforms. It allows you to access any Fidcent product with a single account, similar to how "Sign in with Google" works. In the future, you will be able to use "Sign in with FidId" to quickly log in to WishWing and other Fidcent services.',
   },
   {
     category: 'General',
     question: 'What are WishCoins?',
-    answer: 'WishCoins are our virtual currency. 1 WishCoin = ₦2.5. Use them to send gifts, airtime, greetings, contribute to wishlists, and more.',
+    answer: 'WishCoins are our virtual currency. 1 WishCoin = NGN 2.5. Use them to send gifts, airtime, greetings, and more.',
+  },
+  {
+    category: 'Features',
+    question: 'What is group gifting?',
+    answer: 'Group gifting allows multiple people to contribute toward one gift goal and track contribution progress.',
+  },
+  {
+    category: 'Features',
+    question: 'How do wishlists work?',
+    answer: 'You can create wishes, set funding goals, configure visibility, and let others contribute.',
   },
   {
     category: 'Privacy & Security',
-    question: 'Is my money safe?',
-    answer: 'Absolutely. We use industry-standard encryption and are PCI DSS compliant. Every transaction is protected and fully traceable.',
+    question: 'Is my payment information secure?',
+    answer: 'WishWing uses security controls and encrypted transaction flows. Payment handling may involve certified third-party processors.',
   },
   {
     category: 'General',
-    question: 'Who can use WishWing?',
-    answer: 'Anyone in Nigeria! Whether you\'re celebrating a birthday, wedding, graduation, or just want to send a thoughtful gift — WishWing is for you.',
+    question: 'Is WishWing free?',
+    answer: 'Yes. The app is free to download. You only pay for WishCoins when you want to send gifts or schedule greetings.',
   },
 ];
 
@@ -53,112 +53,209 @@ export const allFAQs: FAQItem[] = [
   },
   {
     category: 'General',
+    question: 'What is FidId?',
+    answer: 'FidId is a unique identifier for users across all Fidcent apps and web platforms. It allows you to access any Fidcent product with a single account, similar to how "Sign in with Google" works. In the future, you will be able to use "Sign in with FidId" to quickly log in to WishWing and other Fidcent services, making your experience seamless and secure across the entire Fidcent ecosystem.',
+  },
+  {
+    category: 'General',
     question: 'Is WishWing free?',
-    answer: 'Yes! The app is free to download. You only pay for WishCoins when you want to send gifts or schedule greetings.',
+    answer: 'Yes. The app is free to download. You only pay for WishCoins when you want to send gifts or schedule greetings.',
   },
   {
     category: 'General',
     question: 'What are WishCoins?',
-    answer: 'WishCoins are our virtual currency. 1 WishCoin = ₦2.5. Use them to send gifts, airtime, greetings, and more.',
+    answer: 'WishCoins are our virtual currency. 1 WishCoin = NGN 2.5. Use them to send gifts, airtime, greetings, and more.',
   },
 
   // Pricing & Payments
   {
     category: 'Pricing & Payments',
     question: 'How much do WishCoins cost?',
-    answer: 'Starting at ₦250 for 100 WishCoins. Bigger bundles include bonus coins (up to 20% extra).',
+    answer: 'Starting at NGN 250 for 100 WishCoins. Bigger bundles can include bonus coins.',
   },
   {
     category: 'Pricing & Payments',
     question: 'What payment methods do you accept?',
-    answer: 'We accept credit/debit cards (Visa, Mastercard, Verve), bank transfer, USSD, and mobile money.',
+    answer: 'Credit/debit cards, bank transfer, USSD, and mobile money.',
   },
   {
     category: 'Pricing & Payments',
     question: 'Can I get a refund on WishCoin purchases?',
-    answer: 'WishCoin purchases are non-refundable, but you can cash out (5% fee, 1,000 minimum) after 30 days.',
+    answer: 'WishCoin purchases are non-refundable, but cash-out options may apply based on platform rules and eligibility conditions.',
   },
   {
     category: 'Pricing & Payments',
     question: 'Are there any hidden fees?',
-    answer: 'No hidden fees! Transfer fee: 2% (minimum ₦5), Cash-out fee: 5%. All fees are clearly stated before transactions.',
+    answer: 'No hidden fees. Applicable fees are displayed before transaction confirmation.',
   },
 
   // Features
   {
     category: 'Features',
     question: 'Can I import my contacts\' birthdays?',
-    answer: 'Yes! WishWing syncs with your phone contacts to automatically import birthdays and keep everything organized.',
+    answer: 'Yes. WishWing can sync with your phone contacts (with permission) to help import birthdays and organize reminders.',
   },
   {
     category: 'Features',
     question: 'How do greetings work?',
-    answer: 'Schedule personalized messages to be sent via SMS, WhatsApp, Email, or push notification at your chosen time.',
+    answer: 'You can schedule personalized greetings to be delivered at your chosen time.',
   },
   {
     category: 'Features',
     question: 'What gifts can I send?',
-    answer: 'Currently: WishCoins, airtime, data, and gift cards. Coming soon: flowers, cakes, experiences, and more physical gifts.',
+    answer: 'Current flows include WishCoins and airtime/data. Additional categories may be rolled out in phases.',
   },
   {
     category: 'Features',
     question: 'Does the recipient need the app?',
-    answer: 'For airtime/data/greetings: No. For WishCoin transfers and wishlist features: Yes, they need the app.',
+    answer: 'For some flows (like wishlist and WishCoin account-linked features), recipient app access is required. For other flows (such as certain greeting or airtime/data scenarios), app requirement may differ.',
   },
   {
     category: 'Features',
     question: 'What is group gifting?',
-    answer: 'Pool contributions with multiple friends to give bigger gifts. Track who has contributed, set funding goals, and the recipient gets notified automatically.',
+    answer: 'Group gifting allows multiple people to contribute toward one gift goal and track contribution progress.',
   },
   {
     category: 'Features',
     question: 'How do wishlists work?',
-    answer: 'Create unlimited wishes with photos and descriptions, set funding goals in WishCoins, and control privacy. Friends can browse your wishlist and contribute any amount.',
+    answer: 'You can create wishes, set funding goals, configure visibility, and let others contribute.',
   },
 
   // Privacy & Security
   {
     category: 'Privacy & Security',
     question: 'Is my payment information secure?',
-    answer: 'Yes. We use industry-standard encryption and are PCI DSS compliant. We never store full card details.',
+    answer: 'WishWing uses security controls and encrypted transaction flows. Payment handling may involve certified third-party processors.',
   },
   {
     category: 'Privacy & Security',
     question: 'Who can see my birthday information?',
-    answer: 'Only you control who sees your information. Set your profile to Public, Friends-Only, or Private.',
+    answer: 'Visibility depends on your profile and privacy settings.',
   },
   {
     category: 'Privacy & Security',
     question: 'Can I delete my account?',
-    answer: 'Yes, anytime from app settings. All data will be permanently deleted within 30 days.',
+    answer: 'Yes. You can delete your account from in-app settings at More/Settings > Account > Delete Account.',
   },
   {
     category: 'Privacy & Security',
-    question: 'Is WishWing NDPR compliant?',
-    answer: 'Yes, WishWing is fully compliant with Nigeria Data Protection Regulation (NDPR) and international data protection standards.',
+    question: 'Is WishWing NDPA compliant?',
+    answer: 'WishWing processes personal data in line with the Nigeria Data Protection Act (NDPA) 2023 and applicable regulations.',
   },
 
   // Support
   {
     category: 'Support',
     question: 'How do I contact support?',
-    answer: 'Email hello_wishwing@fidcent.com or use in-app chat. We respond within 24 hours.',
+    answer: 'Email hello_wishwing@fidcent.com.',
   },
   {
     category: 'Support',
     question: 'What if a gift fails to deliver?',
-    answer: 'Contact support immediately at hello_wishwing@fidcent.com. We\'ll investigate and issue a refund if the failure was on our end.',
+    answer: 'Contact support at hello_wishwing@fidcent.com for investigation and resolution.',
   },
   {
     category: 'Support',
     question: 'Can I use WishWing outside Nigeria?',
-    answer: 'Currently optimized for Nigeria. International expansion planned for 2027.',
+    answer: 'WishWing is currently optimized for Nigeria.',
   },
   {
     category: 'Support',
     question: 'What mobile networks do you support for airtime/data?',
-    answer: 'All major Nigerian networks: MTN, Glo, Airtel, and 9Mobile.',
+    answer: 'Major Nigerian networks including MTN, Glo, Airtel, and 9Mobile.',
+  },
+
+  // Account & Security
+  {
+    category: 'Account & Security',
+    question: 'What account flows are available?',
+    answer: 'Signup, login, forgot password, and phone verification prompts are all available in-app.',
+  },
+  {
+    category: 'Account & Security',
+    question: 'Is biometric login available?',
+    answer: 'Yes. Biometric login is supported on compatible devices.',
+  },
+  {
+    category: 'Account & Security',
+    question: 'Where do I find the account deletion option?',
+    answer: 'In-app account deletion path: More/Settings > Account > Delete Account.',
+  },
+
+  // Contacts & Calendar
+  {
+    category: 'Contacts & Calendar',
+    question: 'Can I manually add or edit contacts?',
+    answer: 'Yes. Manual contact add and edit is supported.',
+  },
+  {
+    category: 'Contacts & Calendar',
+    question: 'How does the birthday calendar work?',
+    answer: 'The birthday calendar supports quick filtering (all/today/this week) and direct actions from each entry.',
+  },
+  {
+    category: 'Contacts & Calendar',
+    question: 'Where can I see upcoming birthdays?',
+    answer: 'Upcoming birthdays are surfaced on the home screen.',
+  },
+
+  // Wishlist & Sharing
+  {
+    category: 'Wishlist & Sharing',
+    question: 'Can I manage my own wishlists?',
+    answer: 'Yes. You can create and manage your own wishlists.',
+  },
+  {
+    category: 'Wishlist & Sharing',
+    question: 'Can I view friends\' wishlists?',
+    answer: 'Yes. Friends wishlist browsing and shared-link flows are supported.',
+  },
+  {
+    category: 'Wishlist & Sharing',
+    question: 'How does wishlist contribution tracking work?',
+    answer: 'Contribution and progress patterns are built into wishlist flows.',
+  },
+
+  // Gifts, Greetings & Wallet
+  {
+    category: 'Gifts, Greetings & Wallet',
+    question: 'How do I send a gift?',
+    answer: 'Send gift flows are available in-app.',
+  },
+  {
+    category: 'Gifts, Greetings & Wallet',
+    question: 'Can I schedule greetings and gifts?',
+    answer: 'Yes. You can schedule greetings and gifts. Scheduled greetings, scheduled gifts, and order history screens are available.',
+  },
+  {
+    category: 'Gifts, Greetings & Wallet',
+    question: 'What wallet features are available?',
+    answer: 'Wallet top-up, withdraw, bank account management, transaction history, and withdrawal history are all available.',
+  },
+
+  // Notifications
+  {
+    category: 'Notifications',
+    question: 'How does the notification center work?',
+    answer: 'A notification center with unread counts is supported in-app.',
+  },
+  {
+    category: 'Notifications',
+    question: 'Can I control my notification preferences?',
+    answer: 'Yes. Notification preferences settings are available in-app.',
   },
 ];
 
-export const faqCategories = ['All', 'General', 'Pricing & Payments', 'Features', 'Privacy & Security', 'Support'];
+export const faqCategories = [
+  'All',
+  'General',
+  'Pricing & Payments',
+  'Features',
+  'Privacy & Security',
+  'Support',
+  'Account & Security',
+  'Contacts & Calendar',
+  'Wishlist & Sharing',
+  'Gifts, Greetings & Wallet',
+  'Notifications',
+];
